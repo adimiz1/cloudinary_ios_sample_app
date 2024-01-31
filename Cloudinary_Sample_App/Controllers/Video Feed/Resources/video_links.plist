@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>video1</key>
+	<string>https://res.cloudinary.com/demo/video/upload/sp_auto:subtitles_(code_en-US;file_docs:narration.vtt)/sea_turtle.m3u8</string>
+	<key>video2</key>
+	<string>https://res.cloudinary.com/demo/video/upload/hourglass_timer.m3u8</string>
+	<key>video3</key>
+	<string>https://res.cloudinary.com/demo/video/upload/sp_auto:subtitles_(code_en-US;file_docs:narration.vtt)/race_road_car.m3u8</string>
+	<key>video4</key>
+	<string>https://res.cloudinary.com/demo/video/upload/sp_auto:subtitles_(code_en-US;file_docs:narration.vtt)/dog.m3u8</string>
+	<key>video5</key>
+	<string>https://res.cloudinary.com/demo/video/upload/sp_auto:subtitles_(code_en-US;file_docs:narration.vtt)/samples/cld-sample-video.m3u8</string>
+</dict>
+</plist>
