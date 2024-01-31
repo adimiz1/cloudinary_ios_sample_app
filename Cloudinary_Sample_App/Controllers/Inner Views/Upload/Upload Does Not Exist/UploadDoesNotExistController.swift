@@ -16,6 +16,8 @@ class UploadDoesNotExistController: UIViewController {
 
     weak var delegate: UploadChoiceControllerDelegate!
 
+    var type: UploadViewType = .Upload
+
     var cloudinary: CLDCloudinary!
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,9 @@ class UploadDoesNotExistController: UIViewController {
             imagePicker = UIImagePickerController()
         }
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            if type == .UploadLarge {
+                imagePicker.mediaTypes = ["public.movie"]
+            }
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
@@ -55,14 +60,26 @@ class UploadDoesNotExistController: UIViewController {
             }
         })
     }
+
+    func uploadVideo(_ url: NSURL) {
+        let params = CLDUploadRequestParams()
+        params.setResourceType("video")
+        cloudinary.createUploader().upload(url: url as URL, uploadPreset: "ios_sample", params: params) { response, error in
+            DispatchQueue.main.async {
+                self.delegate.switchToController(.UploadExist, url: response?.secureUrl)
+            }
+        }
+    }
 }
 
 extension UploadDoesNotExistController:  UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        if let image = info[.originalImage] as? UIImage {
+            uploadImage(image)
+       }
+        if let url = info[.mediaURL] as? NSURL {
+            uploadVideo(url)
         }
-        uploadImage(image)
     }
 }

@@ -18,6 +18,8 @@ class UploadChoiceController: UIViewController {
 
     var currentController: UIViewController!
 
+    var type: UploadViewType = .Upload
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setContainerView(.NoUpload)
@@ -31,6 +33,7 @@ class UploadChoiceController: UIViewController {
         case .NoUpload:
             currentController = UIStoryboard(name: "UploadDoesNotExist", bundle: nil).instantiateViewController(identifier: "UploadDoesNotExistController")
             currentController.view.frame = vwContainer.bounds
+            (currentController as! UploadDoesNotExistController).type = type
             (currentController as! UploadDoesNotExistController).delegate = self
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
@@ -39,6 +42,7 @@ class UploadChoiceController: UIViewController {
         case .UploadExist:
             currentController = UIStoryboard(name: "SingleUpload", bundle: nil).instantiateViewController(identifier: "SingleUploadViewController")
             currentController.view.frame = vwContainer.bounds
+            (currentController as! SingleUploadViewController).type = type
             (currentController as! SingleUploadViewController).delegate = self
             (currentController as! SingleUploadViewController).url = url
             addChild(currentController)

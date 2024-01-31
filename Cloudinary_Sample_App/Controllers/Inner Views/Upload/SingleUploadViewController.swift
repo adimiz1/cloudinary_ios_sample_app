@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Photos
 import Cloudinary
+import AVKit
 
 class SingleUploadViewController: UIViewController {
 
@@ -32,14 +33,31 @@ class SingleUploadViewController: UIViewController {
         super.viewWillAppear(animated)
         setCloudinary()
         setOpenGalleryView()
-        setImageView()
+        setMainView()
     }
 
-    private func setImageView() {
+    private func setMainView() {
         guard let url = url else {
             return
         }
-        ivMain.cldSetImage(url , cloudinary: self.cloudinary)
+        if type == .Upload {
+            ivMain.isHidden = false
+            ivMain.cldSetImage(url , cloudinary: self.cloudinary)
+        }
+        if type == .UploadLarge {
+            ivMain.isHidden = true
+            let player = CLDVideoPlayer(url: url)
+                let playerController = AVPlayerViewController()
+
+                playerController.player = player
+                addChild(playerController)
+                playerController.videoGravity = .resizeAspectFill
+                vwImage.addSubview(playerController.view)
+                playerController.view.frame = vwImage.bounds
+                playerController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                playerController.didMove(toParent: self)
+                player.play()
+        }
     }
 
     private func setCloudinary() {
@@ -99,11 +117,10 @@ class SingleUploadViewController: UIViewController {
 extension SingleUploadViewController:  UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        if let image = info[.originalImage] as? UIImage {
+            ivMain.image = nil
+            uploadImage(image)
         }
-        ivMain.image = nil
-        uploadImage(image)
     }
 }
 

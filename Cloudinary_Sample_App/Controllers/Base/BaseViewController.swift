@@ -68,11 +68,12 @@ class BaseViewController: UIViewController {
         case .Upload:
             let currentController = (UIStoryboard(name: "UploadChoice", bundle: nil).instantiateViewController(identifier: "UploadChoiceController") as! UploadChoiceController)
             currentController.view.frame = vwContainer.bounds
+            currentController.type = .Upload
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
         case .UploadLarge:
-            let currentController = UIStoryboard(name: "SingleUpload", bundle: nil).instantiateViewController(identifier: "SingleUploadViewController") as! SingleUploadViewController
+            let currentController = (UIStoryboard(name: "UploadChoice", bundle: nil).instantiateViewController(identifier: "UploadChoiceController") as! UploadChoiceController)
             currentController.view.frame = vwContainer.bounds
             currentController.type = .UploadLarge
             addChild(currentController)
