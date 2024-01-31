@@ -50,6 +50,9 @@ class UploadViewController: UIViewController {
     private func setFetchUploadView() {
         vwFetchUpload.setTitle(title: "Fetch Upload")
         vwFetchUpload.setSubtitle(subtitle: "Upload image from any URL to your cloud")
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(fetchUploadClicked))
+        vwFetchUpload.addGestureRecognizer(tapGesture)
     }
 
     @objc private func uploadClicked() {
@@ -63,6 +66,14 @@ class UploadViewController: UIViewController {
     @objc private func uploadLargeClicked() {
         if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
             controller.type = .UploadLarge
+            controller.modalPresentationStyle = .fullScreen
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+
+    @objc private func fetchUploadClicked() {
+        if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
+            controller.type = .FetchUpload
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
         }

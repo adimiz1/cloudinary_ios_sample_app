@@ -40,6 +40,9 @@ class BaseViewController: UIViewController {
         case .UploadLarge:
             lbTitle.text = "Upload Large"
             break
+        case .FetchUpload:
+            lbTitle.text = "Fetch Upload"
+            break
         case .UploadWidget:
             lbTitle.text = "Upload Widget"
             break
@@ -54,8 +57,9 @@ class BaseViewController: UIViewController {
     private func setController() {
         switch type {
         case .Optimization:
-            let currentController = UIStoryboard(name: "Optimization", bundle: nil).instantiateViewController(identifier: "OptimizationViewController")
+            let currentController = UIStoryboard(name: "Optimization", bundle: nil).instantiateViewController(identifier: "OptimizationViewController") as! OptimizationViewController
             currentController.view.frame = vwContainer.bounds
+            currentController.type = .Optimization
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
@@ -76,6 +80,14 @@ class BaseViewController: UIViewController {
             let currentController = (UIStoryboard(name: "UploadChoice", bundle: nil).instantiateViewController(identifier: "UploadChoiceController") as! UploadChoiceController)
             currentController.view.frame = vwContainer.bounds
             currentController.type = .UploadLarge
+            addChild(currentController)
+            vwContainer.addSubview(currentController.view)
+            currentController.didMove(toParent: self)
+        case .FetchUpload:
+            let currentController = UIStoryboard(name: "Optimization", bundle: nil).instantiateViewController(identifier: "OptimizationViewController") as! OptimizationViewController
+            currentController.view.frame = vwContainer.bounds
+            currentController.publicId = "https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png"
+            currentController.type = .FetchUpload
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
@@ -107,10 +119,16 @@ enum BaseControllerType {
     case Transform
     case Upload
     case UploadLarge
+    case FetchUpload
     case UploadWidget
     case ImageWidget
 }
 public enum UploadViewType {
     case Upload
     case UploadLarge
+}
+
+public enum OptimizationViewType {
+    case Optimization
+    case FetchUpload
 }

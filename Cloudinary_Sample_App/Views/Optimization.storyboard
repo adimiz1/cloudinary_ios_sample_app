@@ -27,8 +27,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUg-48-Jxa">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="375.66666666666669"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-qt-5v3" customClass="CLDUIImageView" customModule="Cloudinary">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-qt-5v3" customClass="CLDUIImageView" customModule="Cloudinary">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="375.66666666666669"/>
+                                                <color key="backgroundColor" name="size_red"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFO-eV-JKE">
                                                 <rect key="frame" x="20" y="305.66666666666669" width="183" height="50"/>
@@ -120,8 +121,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvr-Ge-ofj">
                                         <rect key="frame" x="0.0" y="385.66666666666674" width="361" height="375.33333333333326"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="UiH-Qv-Lap" customClass="CLDUIImageView" customModule="Cloudinary">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UiH-Qv-Lap" customClass="CLDUIImageView" customModule="Cloudinary">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="375.33333333333331"/>
+                                                <color key="backgroundColor" name="size_red"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIo-sc-d6Y">
                                                 <rect key="frame" x="20" y="305.33333333333331" width="183" height="50"/>
@@ -238,7 +240,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="city" width="357" height="185"/>
         <namedColor name="size_green">
             <color red="0.69803921568627447" green="0.9882352941176471" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
