@@ -55,20 +55,20 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wr3-1a-cxi">
                                                                 <rect key="frame" x="0.0" y="11" width="183" height="39"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG2-jV-kB5">
-                                                                        <rect key="frame" x="0.0" y="11" width="27.333333333333332" height="17"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPG ⏺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG2-jV-kB5">
+                                                                        <rect key="frame" x="0.0" y="11" width="51" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2500x1667" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-JX-ggT">
-                                                                        <rect key="frame" x="37.333333333333336" y="11" width="75.333333333333314" height="17"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2500x1667 ⏺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-JX-ggT">
+                                                                        <rect key="frame" x="61" y="11" width="99" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="886 KB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iua-7p-AMO">
-                                                                        <rect key="frame" x="122.66666666666667" y="11" width="49.666666666666671" height="17"/>
+                                                                        <rect key="frame" x="170" y="11" width="49.666666666666657" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                         <color key="textColor" name="size_red"/>
                                                                         <nil key="highlightedColor"/>
@@ -222,7 +222,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ivOptimized" destination="UiH-Qv-Lap" id="gOy-vn-ycz"/>
                         <outlet property="ivOriginal" destination="ZXR-qt-5v3" id="D1X-sE-Ku8"/>
+                        <outlet property="lbOptimizedDimensions" destination="k2I-2L-Eam" id="Ubl-aq-hwd"/>
+                        <outlet property="lbOptimizedFormat" destination="UmZ-9c-bGn" id="fsf-vr-igM"/>
+                        <outlet property="lbOptimizedSize" destination="gyG-sy-Njm" id="28Q-oK-5B9"/>
+                        <outlet property="lbOriginalDimensions" destination="2Zr-JX-ggT" id="vqB-jW-oVd"/>
+                        <outlet property="lbOriginalFormat" destination="mG2-jV-kB5" id="cjr-oY-gNp"/>
+                        <outlet property="lbOriginalSize" destination="iua-7p-AMO" id="xxk-Ct-P45"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhN-RK-VT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

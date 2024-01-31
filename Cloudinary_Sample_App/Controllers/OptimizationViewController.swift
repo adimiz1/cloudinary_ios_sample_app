@@ -16,14 +16,21 @@ class OptimizationViewController: UIViewController {
     @IBOutlet weak var ivOriginal: CLDUIImageView!
     @IBOutlet weak var ivOptimized: CLDUIImageView!
 
+    @IBOutlet weak var lbOriginalFormat: UILabel!
+    @IBOutlet weak var lbOriginalDimensions: UILabel!
+    @IBOutlet weak var lbOriginalSize: UILabel!
+
+    @IBOutlet weak var lbOptimizedFormat: UILabel!
+    @IBOutlet weak var lbOptimizedDimensions: UILabel!
+    @IBOutlet weak var lbOptimizedSize: UILabel!
+
     var cloudinary: CLDCloudinary!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        initCloudinary()
-//        setBackButton()
-//        setOriginalImageView()
-//        setOptimizedImageView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initCloudinary()
+        setOriginalImageView()
+        setOptimizedImageView()
     }
 
     func initCloudinary() {
@@ -36,7 +43,7 @@ class OptimizationViewController: UIViewController {
     }
 
     func setOriginalImageView() {
-        let url = cloudinary.createUrl().generate("4k_sample")
+        let url = cloudinary.createUrl().generate("4kimage")
         ivOriginal.cldSetImage(url!, cloudinary: cloudinary)
 
         let gesture = UITapGestureRecognizer(target: self, action: #selector(imageClicked))
@@ -46,16 +53,24 @@ class OptimizationViewController: UIViewController {
     }
 
     func setOptimizedImageView() {
-        let url = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.4).setCrop("scale")).generate("4k_sample")
+        let url = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.4).setCrop("scale")).generate("4kimage")
         ivOptimized.cldSetImage(url!, cloudinary: cloudinary)
     }
 
     @objc func imageClicked() {
-        guard let image = self.ivOriginal.image, let image2 = self.ivOptimized.image else {
+        guard let _ = self.ivOriginal.image, let _ = self.ivOptimized.image else {
             return
         }
-        self.lbOriginal.text = "Original: \(Int(self.ivOriginal.image!.size.width))x\(Int(self.ivOriginal.image!.size.height)), \(FileUtils.getFileSizeForImage(image))MB"
-        self.lbOptimized.text = "Optimized: \(Int(self.ivOptimized.image!.size.width))x\(Int(self.ivOptimized.image!.size.height)), \(FileUtils.getFileSizeForImage(image2))MB"
+        FileUtils.getImageFromat(URL(string: cloudinary.createUrl().generate("4kimage")!)!) { format,size  in
+            self.lbOriginalFormat.text = "\(format.uppercased()) ⏺"
+            self.lbOriginalDimensions.text = "\(Int(self.ivOriginal.image!.size.width))x\(Int(self.ivOriginal.image!.size.height)) ⏺"
+            self.lbOriginalSize.text = "\(size)MB"
+        }
+        FileUtils.getImageFromat(URL(string: cloudinary.createUrl().setTransformation(CLDTransformation().setFetchFormat("auto")).generate("4kimage")!)!) { format, size in
+            self.lbOptimizedFormat.text = "\(format.uppercased()) ⏺"
+            self.lbOptimizedDimensions.text = "\(Int(self.ivOriginal.image!.size.width))x\(Int(self.ivOriginal.image!.size.height)) ⏺"
+            self.lbOptimizedSize.text = "\(size)MB"
+        }
     }
 
     @objc func stepBack() {
