@@ -17,6 +17,8 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var cvVideoFeed: UICollectionView!
 
     var collectionController: VideoFeedCollectionController!
+
+    var playerController: AVPlayerViewController!
     var player: CLDVideoPlayer!
 
     override func viewWillAppear(_ animated: Bool) {
@@ -27,16 +29,14 @@ class VideoViewController: UIViewController {
 
     private func setVideoView() {
         player = CLDVideoPlayer(url: "https://res.cloudinary.com/mobiledemoapp/video/upload/v1706627663/Demo%20app%20content/001_Smart_Cropping_08_jkyizb.mp4")
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.vwVideoView.bounds
-        playerLayer.videoGravity = .resizeAspectFill
-        vwVideoView.layer.addSublayer(playerLayer)
-        player.isMuted = true
-        player.play()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(playerDidFinishPlaying),
-                                               name: .AVPlayerItemDidPlayToEndTime,
-                                               object: player.currentItem)
+        playerController = AVPlayerViewController()
+        playerController.player = player
+        addChild(playerController)
+        playerController.videoGravity = .resizeAspectFill
+        vwVideoView.addSubview(playerController.view)
+        playerController.view.frame = vwVideoView.bounds
+        playerController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        playerController.didMove(toParent: self)
     }
 
     private func setVideoFeedCollectionView() {
