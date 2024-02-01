@@ -19,7 +19,7 @@ class TransformCollectionCell: UICollectionViewCell {
             ivMain.cldSetImage(publicId: "Demo%20app%20content/content-aware-crop-4-ski_louxkt", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
             lbMain.text = "Smart Cropping"
         case 1:
-            ivMain.cldSetImage(publicId: "Demo%20app%20content//layers-backpack_ruek7e", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
+            ivMain.cldSetImage(publicId: "Demo%20app%20content/layers-fashion-2_1_xsfbvm", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
             lbMain.text = "Localization & branding"
         case 2:
             ivMain.cldSetImage(publicId: "Demo%20app%20content/bgr-furniture-1_isnptj", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))

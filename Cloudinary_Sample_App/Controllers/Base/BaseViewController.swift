@@ -86,7 +86,7 @@ class BaseViewController: UIViewController {
         case .FetchUpload:
             let currentController = UIStoryboard(name: "Optimization", bundle: nil).instantiateViewController(identifier: "OptimizationViewController") as! OptimizationViewController
             currentController.view.frame = vwContainer.bounds
-            currentController.publicId = "https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png"
+            currentController.publicId = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg/1600px-Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg?20150402075721"
             currentController.type = .FetchUpload
             addChild(currentController)
             vwContainer.addSubview(currentController.view)

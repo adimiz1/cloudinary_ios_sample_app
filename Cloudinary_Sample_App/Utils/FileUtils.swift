@@ -17,15 +17,26 @@ class FileUtils {
         return "\(size.rounded(toPlaces: 2))"
     }
 
-    static func getImageFromat(_ url: URL, completion: @escaping (_ format: String, _ size: String) -> Void) {
+    static func getImageInfo(_ url: URL, completion: @escaping (_ format: String, _ size: String, _ dimensions: (width: CGFloat, height: CGFloat)) -> Void) {
         getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() {
+            guard let data = data, error == nil else {
+                // Handle error case
+                return
+            }
+
+            DispatchQueue.main.async {
+                guard data.count > 0 else {
+                    return
+                }
                 let format = ImageFormat.get(from: data).rawValue
 
                 let imageSize: Int = data.count
                 let size = Double(imageSize) / 1024.0 / 1024.0
-                completion(format, "\(size.rounded(toPlaces: 2))")
+
+                let image = UIImage(data: data)
+                let dimensions = image.map { ($0.size.width, $0.size.height) }
+
+                completion(format, "\(size.rounded(toPlaces: 2))", dimensions!)
             }
         }
     }

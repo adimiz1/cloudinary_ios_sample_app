@@ -36,9 +36,9 @@ class TransformViewController: UIViewController {
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content//layers-backpack_ruek7e"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation()
+            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation()
                 .setOverlay("text:Arial_72:NEW%2520COLLECTION").setColor("white").chain()
-                .setFlags("layer_apply").setGravity("center")).generate("Demo%20app%20content//layers-backpack_ruek7e"))
+                .setFlags("layer_apply").setGravity("center")).generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"))
         case .BackgroundRemoval:
             let currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
