@@ -18,8 +18,6 @@
 		B61488932AB06CA800002289 /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61488922AB06CA800002289 /* TransformViewController.swift */; };
 		B61488962AB06D3400002289 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = B61488952AB06D3400002289 /* Cloudinary */; };
 		B61488992AB07B6500002289 /* CloudinaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61488982AB07B6500002289 /* CloudinaryHelper.swift */; };
-		B62050B82AB81A62002F561F /* ComplexTransform.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62050B72AB81A62002F561F /* ComplexTransform.storyboard */; };
-		B62050BA2AB81A74002F561F /* ComplexTransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62050B92AB81A74002F561F /* ComplexTransformViewController.swift */; };
 		B621F01C2B69002A00095019 /* DeliveryTransformCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */; };
 		B621F01F2B69016E00095019 /* DeliveryUseCasesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */; };
 		B621F0212B6901A300095019 /* UseCaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F0202B6901A300095019 /* UseCaseCell.swift */; };
@@ -49,18 +47,12 @@
 		B665FED22B3D746500452FC6 /* InnerUploadFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665FED12B3D746500452FC6 /* InnerUploadFrame.swift */; };
 		B665FED52B3D776300452FC6 /* Widgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B665FED42B3D776300452FC6 /* Widgets.storyboard */; };
 		B6838E4E2AB961BD00B972D7 /* car-film.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B6838E4D2AB961B800B972D7 /* car-film.mp4 */; };
-		B6838E502AB963B400B972D7 /* UploadLarge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6838E4F2AB963B400B972D7 /* UploadLarge.storyboard */; };
-		B6838E522AB963E900B972D7 /* UploadLargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6838E512AB963E900B972D7 /* UploadLargeViewController.swift */; };
-		B6838E542AB96A1500B972D7 /* PreProcessing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6838E532AB96A1500B972D7 /* PreProcessing.storyboard */; };
-		B6838E562AB96A2100B972D7 /* PreProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6838E552AB96A2100B972D7 /* PreProcessingViewController.swift */; };
 		B697FB032B0F663D00E3C432 /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B697FAFD2B0F663D00E3C432 /* MainPageController.swift */; };
 		B697FB042B0F663D00E3C432 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B697FAFE2B0F663D00E3C432 /* VideoViewController.swift */; };
 		B697FB052B0F663D00E3C432 /* video_links.plist in Resources */ = {isa = PBXBuildFile; fileRef = B697FB002B0F663D00E3C432 /* video_links.plist */; };
 		B697FB062B0F663D00E3C432 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B697FB022B0F663D00E3C432 /* VideoHelper.swift */; };
 		B697FB082B0F665A00E3C432 /* VideoFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B697FB072B0F665A00E3C432 /* VideoFeed.storyboard */; };
 		B697FB0A2B0F676500E3C432 /* VideoFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B697FB092B0F676500E3C432 /* VideoFeedController.swift */; };
-		B69B1B0C2AB997D900DC4358 /* FetchUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69B1B0B2AB997D900DC4358 /* FetchUpload.storyboard */; };
-		B69B1B0E2AB997E600DC4358 /* FetchUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B1B0D2AB997E600DC4358 /* FetchUploadViewController.swift */; };
 		B69FA1D92AB86307001D361F /* Optimization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69FA1D82AB86307001D361F /* Optimization.storyboard */; };
 		B69FA1DB2AB8631A001D361F /* OptimizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FA1DA2AB8631A001D361F /* OptimizationViewController.swift */; };
 		B69FA1E02AB866A0001D361F /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FA1DF2AB866A0001D361F /* FileUtils.swift */; };
@@ -70,8 +62,6 @@
 		B6BAAA342AB9730D0012D8A8 /* UploadWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */; };
 		B6BAAA362AB9772D0012D8A8 /* ImageWidget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */; };
 		B6BAAA382AB977410012D8A8 /* ImageWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */; };
-		B6BAAA3A2AB977690012D8A8 /* VideoWidget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BAAA392AB977690012D8A8 /* VideoWidget.storyboard */; };
-		B6BAAA3C2AB977870012D8A8 /* VideoWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAAA3B2AB977870012D8A8 /* VideoWidgetViewController.swift */; };
 		B6BD44CA2B453B8400DD6AA6 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD44C92B453B8400DD6AA6 /* Video.storyboard */; };
 		B6BD44CD2B458A1900DD6AA6 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BD44CC2B458A1900DD6AA6 /* AnimationHelper.swift */; };
 		B6BD44D02B45972B00DD6AA6 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD44CF2B45972B00DD6AA6 /* Base.storyboard */; };
@@ -99,8 +89,6 @@
 		B61488902AB06C9500002289 /* Transform.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transform.storyboard; sourceTree = "<group>"; };
 		B61488922AB06CA800002289 /* TransformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		B61488982AB07B6500002289 /* CloudinaryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryHelper.swift; sourceTree = "<group>"; };
-		B62050B72AB81A62002F561F /* ComplexTransform.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComplexTransform.storyboard; sourceTree = "<group>"; };
-		B62050B92AB81A74002F561F /* ComplexTransformViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexTransformViewController.swift; sourceTree = "<group>"; };
 		B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTransformCollectionController.swift; sourceTree = "<group>"; };
 		B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryUseCasesCollectionController.swift; sourceTree = "<group>"; };
 		B621F0202B6901A300095019 /* UseCaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCell.swift; sourceTree = "<group>"; };
@@ -130,18 +118,12 @@
 		B665FED12B3D746500452FC6 /* InnerUploadFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerUploadFrame.swift; sourceTree = "<group>"; };
 		B665FED42B3D776300452FC6 /* Widgets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Widgets.storyboard; sourceTree = "<group>"; };
 		B6838E4D2AB961B800B972D7 /* car-film.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "car-film.mp4"; sourceTree = "<group>"; };
-		B6838E4F2AB963B400B972D7 /* UploadLarge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadLarge.storyboard; sourceTree = "<group>"; };
-		B6838E512AB963E900B972D7 /* UploadLargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLargeViewController.swift; sourceTree = "<group>"; };
-		B6838E532AB96A1500B972D7 /* PreProcessing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreProcessing.storyboard; sourceTree = "<group>"; };
-		B6838E552AB96A2100B972D7 /* PreProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreProcessingViewController.swift; sourceTree = "<group>"; };
 		B697FAFD2B0F663D00E3C432 /* MainPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		B697FAFE2B0F663D00E3C432 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		B697FB002B0F663D00E3C432 /* video_links.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = video_links.plist; sourceTree = "<group>"; };
 		B697FB022B0F663D00E3C432 /* VideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
 		B697FB072B0F665A00E3C432 /* VideoFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoFeed.storyboard; sourceTree = "<group>"; };
 		B697FB092B0F676500E3C432 /* VideoFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedController.swift; sourceTree = "<group>"; };
-		B69B1B0B2AB997D900DC4358 /* FetchUpload.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FetchUpload.storyboard; sourceTree = "<group>"; };
-		B69B1B0D2AB997E600DC4358 /* FetchUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUploadViewController.swift; sourceTree = "<group>"; };
 		B69FA1D82AB86307001D361F /* Optimization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Optimization.storyboard; sourceTree = "<group>"; };
 		B69FA1DA2AB8631A001D361F /* OptimizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizationViewController.swift; sourceTree = "<group>"; };
 		B69FA1DF2AB866A0001D361F /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
@@ -151,8 +133,6 @@
 		B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadWidgetViewController.swift; sourceTree = "<group>"; };
 		B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageWidget.storyboard; sourceTree = "<group>"; };
 		B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWidgetViewController.swift; sourceTree = "<group>"; };
-		B6BAAA392AB977690012D8A8 /* VideoWidget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoWidget.storyboard; sourceTree = "<group>"; };
-		B6BAAA3B2AB977870012D8A8 /* VideoWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWidgetViewController.swift; sourceTree = "<group>"; };
 		B6BD44C92B453B8400DD6AA6 /* Video.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		B6BD44CC2B458A1900DD6AA6 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		B6BD44CF2B45972B00DD6AA6 /* Base.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
@@ -220,17 +200,8 @@
 				B64036EE2B4FF14F0018A023 /* Upload */,
 				B6BD44D42B4BD17500DD6AA6 /* Transform */,
 				B665FEC62B3D507000452FC6 /* Inner Views */,
-				B697FB072B0F665A00E3C432 /* VideoFeed.storyboard */,
 				B61488622AAF3AE000002289 /* Main.storyboard */,
 				B61488672AAF3AE100002289 /* LaunchScreen.storyboard */,
-				B62050B72AB81A62002F561F /* ComplexTransform.storyboard */,
-				B69FA1D82AB86307001D361F /* Optimization.storyboard */,
-				B6838E4F2AB963B400B972D7 /* UploadLarge.storyboard */,
-				B69B1B0B2AB997D900DC4358 /* FetchUpload.storyboard */,
-				B6838E532AB96A1500B972D7 /* PreProcessing.storyboard */,
-				B6BAAA312AB972EF0012D8A8 /* UploadWidget.storyboard */,
-				B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */,
-				B6BAAA392AB977690012D8A8 /* VideoWidget.storyboard */,
 				B63F36A02B3C000A00A82C49 /* Splash.storyboard */,
 			);
 			path = Views;
@@ -244,16 +215,6 @@
 				B665FEC92B3D566300452FC6 /* Inner Views */,
 				B697FAFB2B0F662A00E3C432 /* Video Feed */,
 				B61488602AAF3AE000002289 /* MainViewController.swift */,
-				B61488922AB06CA800002289 /* TransformViewController.swift */,
-				B62050B92AB81A74002F561F /* ComplexTransformViewController.swift */,
-				B69FA1DA2AB8631A001D361F /* OptimizationViewController.swift */,
-				B69FA1E52AB87016001D361F /* UploadViewController.swift */,
-				B6838E512AB963E900B972D7 /* UploadLargeViewController.swift */,
-				B6838E552AB96A2100B972D7 /* PreProcessingViewController.swift */,
-				B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */,
-				B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */,
-				B6BAAA3B2AB977870012D8A8 /* VideoWidgetViewController.swift */,
-				B69B1B0D2AB997E600DC4358 /* FetchUploadViewController.swift */,
 				B63F36A22B3C02C800A82C49 /* SplashViewController.swift */,
 			);
 			path = Controllers;
@@ -362,6 +323,8 @@
 		B640F8232B624E3D00173CB9 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */,
+				B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */,
 				B640F8242B624E4800173CB9 /* WidgetsViewController.swift */,
 			);
 			path = Widgets;
@@ -380,11 +343,11 @@
 		B665FEC62B3D507000452FC6 /* Inner Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6EEAD9C2B6BB351000A745E /* Video */,
+				B6EEAD9B2B6BB340000A745E /* Delivery */,
+				B6EEAD9A2B6BB312000A745E /* Widgets */,
 				B6BD44CE2B45971F00DD6AA6 /* Base */,
 				B665FED32B3D772200452FC6 /* Upload */,
-				B665FEC72B3D508B00452FC6 /* Delivery.storyboard */,
-				B665FED42B3D776300452FC6 /* Widgets.storyboard */,
-				B6BD44C92B453B8400DD6AA6 /* Video.storyboard */,
 			);
 			path = "Inner Views";
 			sourceTree = "<group>";
@@ -403,6 +366,7 @@
 		B665FED02B3D745B00452FC6 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				B69FA1E52AB87016001D361F /* UploadViewController.swift */,
 				B621F02F2B69203E00095019 /* Upload Does Not Exist */,
 				B64036EF2B4FF1590018A023 /* SingleUploadViewController.swift */,
 				B665FED12B3D746500452FC6 /* InnerUploadFrame.swift */,
@@ -510,6 +474,8 @@
 		B6BD44D52B4BD19100DD6AA6 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				B69FA1DA2AB8631A001D361F /* OptimizationViewController.swift */,
+				B61488922AB06CA800002289 /* TransformViewController.swift */,
 				B621F0292B6919C800095019 /* Reveal Image */,
 				B621F0222B6907F300095019 /* Smart Cropping */,
 				B6BD44D62B4BD1A100DD6AA6 /* TransformCollectionCell.swift */,
@@ -533,6 +499,34 @@
 				B6EEAD962B6A7F81000A745E /* VideoFeedCell.swift */,
 			);
 			path = "Video Feed";
+			sourceTree = "<group>";
+		};
+		B6EEAD9A2B6BB312000A745E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				B6BAAA312AB972EF0012D8A8 /* UploadWidget.storyboard */,
+				B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */,
+				B665FED42B3D776300452FC6 /* Widgets.storyboard */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		B6EEAD9B2B6BB340000A745E /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				B665FEC72B3D508B00452FC6 /* Delivery.storyboard */,
+				B69FA1D82AB86307001D361F /* Optimization.storyboard */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		B6EEAD9C2B6BB351000A745E /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				B6BD44C92B453B8400DD6AA6 /* Video.storyboard */,
+				B697FB072B0F665A00E3C432 /* VideoFeed.storyboard */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -604,26 +598,21 @@
 				B665FED52B3D776300452FC6 /* Widgets.storyboard in Resources */,
 				B697FB052B0F663D00E3C432 /* video_links.plist in Resources */,
 				B621F0262B69085900095019 /* SmartCropping.storyboard in Resources */,
-				B6838E542AB96A1500B972D7 /* PreProcessing.storyboard in Resources */,
 				B61488732AAF3B2200002289 /* Colors.xcassets in Resources */,
 				B63F36A12B3C000A00A82C49 /* Splash.storyboard in Resources */,
 				B64036F22B4FF7130018A023 /* SingleUpload.storyboard in Resources */,
 				B6BD44D02B45972B00DD6AA6 /* Base.storyboard in Resources */,
-				B6BAAA3A2AB977690012D8A8 /* VideoWidget.storyboard in Resources */,
 				B6BAAA362AB9772D0012D8A8 /* ImageWidget.storyboard in Resources */,
 				B621F02E2B691E6000095019 /* UploadDoesNotExist.storyboard in Resources */,
 				B64036F52B5011C30018A023 /* UploadLoadingView.xib in Resources */,
 				B6EEAD6A2B692F9A000A745E /* UploadChoice.storyboard in Resources */,
 				B61488662AAF3AE100002289 /* Assets.xcassets in Resources */,
 				B6838E4E2AB961BD00B972D7 /* car-film.mp4 in Resources */,
-				B6838E502AB963B400B972D7 /* UploadLarge.storyboard in Resources */,
 				B6BAAA322AB972EF0012D8A8 /* UploadWidget.storyboard in Resources */,
-				B62050B82AB81A62002F561F /* ComplexTransform.storyboard in Resources */,
 				B621F0282B69198D00095019 /* RevealImage.storyboard in Resources */,
 				B6BD44CA2B453B8400DD6AA6 /* Video.storyboard in Resources */,
 				B665FECF2B3D73B000452FC6 /* InnerUploadFrame.xib in Resources */,
 				B697FB082B0F665A00E3C432 /* VideoFeed.storyboard in Resources */,
-				B69B1B0C2AB997D900DC4358 /* FetchUpload.storyboard in Resources */,
 				B61488642AAF3AE000002289 /* Main.storyboard in Resources */,
 				B63F36A62B3C16BD00A82C49 /* Toolbar.xib in Resources */,
 				B63F36AA2B3C2BB400A82C49 /* ToolbarItem.xib in Resources */,
@@ -641,7 +630,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B64036F72B50138C0018A023 /* UploadLoadingView.swift in Sources */,
-				B69B1B0E2AB997E600DC4358 /* FetchUploadViewController.swift in Sources */,
 				B63F36A82B3C1A5A00A82C49 /* Toolbar.swift in Sources */,
 				B621F01C2B69002A00095019 /* DeliveryTransformCollectionController.swift in Sources */,
 				B6BD44CD2B458A1900DD6AA6 /* AnimationHelper.swift in Sources */,
@@ -650,7 +638,6 @@
 				B6BD44D32B46D9C100DD6AA6 /* BaseViewController.swift in Sources */,
 				B61488932AB06CA800002289 /* TransformViewController.swift in Sources */,
 				B63F36AD2B3C2C0500A82C49 /* ToolbarItem.swift in Sources */,
-				B62050BA2AB81A74002F561F /* ComplexTransformViewController.swift in Sources */,
 				B6BD44DB2B4BF6AE00DD6AA6 /* RevealImageView.swift in Sources */,
 				B61488612AAF3AE000002289 /* MainViewController.swift in Sources */,
 				B697FB032B0F663D00E3C432 /* MainPageController.swift in Sources */,
@@ -672,9 +659,7 @@
 				B6EEAD6C2B692FB1000A745E /* UploadChoiceController.swift in Sources */,
 				B63F369F2B3BFF0300A82C49 /* GradientView.swift in Sources */,
 				B621F01F2B69016E00095019 /* DeliveryUseCasesCollectionController.swift in Sources */,
-				B6BAAA3C2AB977870012D8A8 /* VideoWidgetViewController.swift in Sources */,
 				B6EEAD952B6A7F63000A745E /* VideoFeedCollectionController.swift in Sources */,
-				B6838E522AB963E900B972D7 /* UploadLargeViewController.swift in Sources */,
 				B69FA1E22AB86F4D001D361F /* Double+Extension.swift in Sources */,
 				B665FED22B3D746500452FC6 /* InnerUploadFrame.swift in Sources */,
 				B621F0312B69204B00095019 /* UploadDoesNotExistController.swift in Sources */,
@@ -682,7 +667,6 @@
 				B614885F2AAF3AE000002289 /* SceneDelegate.swift in Sources */,
 				B6BAAA382AB977410012D8A8 /* ImageWidgetViewController.swift in Sources */,
 				B69FA1DB2AB8631A001D361F /* OptimizationViewController.swift in Sources */,
-				B6838E562AB96A2100B972D7 /* PreProcessingViewController.swift in Sources */,
 				B6EEAD972B6A7F81000A745E /* VideoFeedCell.swift in Sources */,
 				B64036F02B4FF1590018A023 /* SingleUploadViewController.swift in Sources */,
 			);
