@@ -16,18 +16,13 @@ class UploadLargeViewController: UIViewController {
     @IBOutlet weak var aiLoading: UIActivityIndicatorView!
     @IBOutlet weak var vwBack: UIView!
 
-    var cloudinary: CLDCloudinary!
+    var cloudinary = CloudinaryHelper.shared.cloudinary
     var videoPicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCloudinary()
         setBackButton()
         setUploadButton()
-    }
-
-    func setCloudinary() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2"))
     }
 
     func setBackButton() {

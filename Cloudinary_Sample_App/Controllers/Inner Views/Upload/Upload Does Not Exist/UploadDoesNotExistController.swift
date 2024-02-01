@@ -18,16 +18,11 @@ class UploadDoesNotExistController: UIViewController {
 
     var type: UploadViewType = .Upload
 
-    var cloudinary: CLDCloudinary!
+    var cloudinary = CloudinaryHelper.shared.cloudinary
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setCloudinary()
         setUploadImageView()
-    }
-
-    private func setCloudinary() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2"))
     }
 
     func setUploadImageView() {

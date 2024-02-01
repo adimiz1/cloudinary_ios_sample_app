@@ -348,7 +348,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="delivery-city" width="357" height="185"/>
+        <image name="delivery-city" width="714" height="370"/>
         <image name="delivery-smart_crop" width="224" height="135"/>
         <namedColor name="gradient-first">
             <color red="0.20392156862745098" green="0.28235294117647058" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

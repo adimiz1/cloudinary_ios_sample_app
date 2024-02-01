@@ -26,19 +26,14 @@ class OptimizationViewController: UIViewController {
 
     var type: OptimizationViewType = .Optimization
 
-    var publicId: String = "4kimage"
+    var publicId: String = "Demo%20app%20content/optimization_optimized"
 
-    var cloudinary: CLDCloudinary!
+    var cloudinary = CloudinaryHelper.shared.cloudinary
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        initCloudinary()
         setOriginalImageView()
         setOptimizedImageView()
-    }
-
-    func initCloudinary() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2", secure: true))
     }
 
     func setBackButton() {
@@ -64,7 +59,7 @@ class OptimizationViewController: UIViewController {
     }
 
     func setOptimizedImageView() {
-        var url = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("auto").setDpr("auto").setWidth(0.4).setCrop("scale")).generate(publicId)
+        var url = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.4).setCrop("scale")).generate(publicId)
         if type == .FetchUpload {
             url = cloudinary.createUrl().setType("fetch").setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("auto").setDpr("auto").setWidth(0.4).setCrop("scale")).generate(publicId)
         }

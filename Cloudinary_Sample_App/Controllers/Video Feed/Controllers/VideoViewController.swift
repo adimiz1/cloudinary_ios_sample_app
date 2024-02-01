@@ -12,42 +12,41 @@ import AVKit
 
 class VideoViewController: UIViewController {
 
-    var url: String = ""
-    var player: CLDVideoPlayer!
+    @IBOutlet weak var vwVideoView: UIView!
 
-  static func getInstance(url: String) -> UIViewController {
-    let vc = UIStoryboard(name: "VideoFeed", bundle: nil).instantiateViewController(identifier: "VideoViewController") as! VideoViewController
-    vc.url = url
-    return vc
-  }
+    @IBOutlet weak var cvVideoFeed: UICollectionView!
+
+    var collectionController: VideoFeedCollectionController!
+    var player: CLDVideoPlayer!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setVideoView()
+        setVideoFeedCollectionView()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        player.play()
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        player.pause()
-    }
-
-    func setPlayer() {
-        guard let url = URL(string: url) else {
-            return
-        }
-        player = CLDVideoPlayer(url: url)
+    private func setVideoView() {
+        player = CLDVideoPlayer(url: "https://res.cloudinary.com/mobiledemoapp/video/upload/v1706627663/Demo%20app%20content/001_Smart_Cropping_08_jkyizb.mp4")
         let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
+        playerLayer.frame = self.vwVideoView.bounds
         playerLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(playerLayer)
+        vwVideoView.layer.addSublayer(playerLayer)
         player.isMuted = true
+        player.play()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerDidFinishPlaying),
+                                               name: .AVPlayerItemDidPlayToEndTime,
+                                               object: player.currentItem)
     }
 
-    func playVideo() {
+    private func setVideoFeedCollectionView() {
+        collectionController = VideoFeedCollectionController()
+        cvVideoFeed.delegate = collectionController
+        cvVideoFeed.dataSource = collectionController
+    }
+
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        player.seek(to: .zero) // Seek to the beginning of the video
         player.play()
     }
 }

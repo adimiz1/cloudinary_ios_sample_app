@@ -21,11 +21,10 @@ class PreProcessingViewController: UIViewController {
     @IBOutlet weak var aiLoading: UIActivityIndicatorView!
 
 
-    var cloudinary: CLDCloudinary!
+    var cloudinary = CloudinaryHelper.shared.cloudinary
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCloudinary()
         setBackButton()
         setUploadButton()
         setOriginalImage()
@@ -40,10 +39,6 @@ class PreProcessingViewController: UIViewController {
 
     func setOriginalImage() {
         ivOriginal.image = UIImage(named: "yellow-car")
-    }
-
-    func setCloudinary() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2"))
     }
 
     func setBackButton() {

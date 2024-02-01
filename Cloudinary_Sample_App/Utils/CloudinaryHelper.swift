@@ -14,6 +14,6 @@ class CloudinaryHelper {
     var cloudinary: CLDCloudinary
 
     init() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "demo", secure: true))
+        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "mobiledemoapp", secure: true))
     }
 }

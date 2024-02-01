@@ -15,16 +15,16 @@ class MainPageController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let videoLinksData = VideoHelper.parsePlist() ?? [String]()
-
-        for link in videoLinksData {
-            let controller = VideoViewController.getInstance(url: link) as! VideoViewController
-            controller.setPlayer()
-            videoControllersList.append(controller)
-        }
-        self.dataSource = self
-        (videoControllersList[0] as! VideoViewController).playVideo()
-        setViewControllers([videoControllersList[0]], direction: .forward, animated: true, completion: nil)
+//        let videoLinksData = VideoHelper.parsePlist() ?? [String]()
+//
+//        for link in videoLinksData {
+//            let controller = VideoViewController.getInstance(url: link) as! VideoViewController
+//            controller.setPlayer()
+//            videoControllersList.append(controller)
+//        }
+//        self.dataSource = self
+//        (videoControllersList[0] as! VideoViewController).playVideo()
+//        setViewControllers([videoControllersList[0]], direction: .forward, animated: true, completion: nil)
     }
 }
 
@@ -38,7 +38,7 @@ extension MainPageController: UIPageViewControllerDataSource {
         guard let controller = videoControllersList[indexOfCurrentPageViewController - 1] as? VideoViewController else {
             return videoControllersList[indexOfCurrentPageViewController - 1]
         }
-        controller.playVideo()
+//        controller.playVideo()
       return videoControllersList[indexOfCurrentPageViewController - 1]
     }
   }
@@ -52,7 +52,7 @@ extension MainPageController: UIPageViewControllerDataSource {
         guard let controller = videoControllersList[indexOfCurrentPageViewController + 1] as? VideoViewController else {
             return videoControllersList[indexOfCurrentPageViewController + 1]
         }
-        controller.playVideo()
+//        controller.playVideo()
         return videoControllersList[indexOfCurrentPageViewController + 1]
     }
   }

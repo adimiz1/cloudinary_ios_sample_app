@@ -14,7 +14,7 @@ class ImageWidgetViewController: UIViewController {
     @IBOutlet weak var ivRemote: CLDUIImageView!
     @IBOutlet weak var ivCloudinary: CLDUIImageView!
 
-    var cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "mobiledemoapp", secure: true))
+    let cloudinary = CloudinaryHelper.shared.cloudinary
 
     
     override func viewWillAppear(_ animated: Bool) {

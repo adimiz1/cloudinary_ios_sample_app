@@ -14,18 +14,14 @@ class UploadWidgetViewController: UIViewController {
     @IBOutlet weak var ivMain: CLDUIImageView!
     @IBOutlet weak var vwOpenGallery: UIView!
     
-    var cloudinary: CLDCloudinary!
+    var cloudinary = CloudinaryHelper.shared.cloudinary
     var uploadWidget: CLDUploaderWidget!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCloudinary()
         setUploadButton()
     }
 
-    func setCloudinary() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2"))
-    }
 
     func setUploadButton() {
         vwOpenGallery.layer.cornerRadius = vwOpenGallery.frame.height / 2

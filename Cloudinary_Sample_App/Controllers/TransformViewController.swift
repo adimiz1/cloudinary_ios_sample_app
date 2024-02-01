@@ -36,23 +36,23 @@ class TransformViewController: UIViewController {
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: UIImage(named: "bag"), leftImage: UIImage(named: "bag"))
+            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content//layers-backpack_ruek7e"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation()
+                .setOverlay("text:Arial_72:NEW%2520COLLECTION").setColor("white").chain()
+                .setFlags("layer_apply").setGravity("center")).generate("Demo%20app%20content//layers-backpack_ruek7e"))
         case .BackgroundRemoval:
             let currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: UIImage(named: "sofa"), leftImage: UIImage(named: "sofa"))
+            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/bgr-furniture-1_isnptj"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("background_removal")).generate("Demo%20app%20content/bgr-furniture-1_isnptj"))
         case .ReColor:
             let currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: UIImage(named: "lady"), leftImage: UIImage(named: "lady"))
-        default:
-            break
+            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/recolor-tshirt-5_omapls"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("gen_recolor:prompt_t-shirt;to-color_8fbc8f")).generate("Demo%20app%20content/recolor-tshirt-5_omapls"))
         }
     }
 

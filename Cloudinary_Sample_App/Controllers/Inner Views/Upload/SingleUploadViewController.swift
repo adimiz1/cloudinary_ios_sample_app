@@ -21,7 +21,7 @@ class SingleUploadViewController: UIViewController {
 
     var url: String?
 
-    var cloudinary: CLDCloudinary!
+    var cloudinary = CloudinaryHelper.shared.cloudinary
 
     var uploadLoadingView: UploadLoadingView?
 
@@ -31,7 +31,6 @@ class SingleUploadViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setCloudinary()
         setOpenGalleryView()
         setMainView()
     }
@@ -58,10 +57,6 @@ class SingleUploadViewController: UIViewController {
                 playerController.didMove(toParent: self)
                 player.play()
         }
-    }
-
-    private func setCloudinary() {
-        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2"))
     }
 
     private func setOpenGalleryView() {

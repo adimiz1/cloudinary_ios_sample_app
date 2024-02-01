@@ -16,16 +16,16 @@ class TransformCollectionCell: UICollectionViewCell {
     func setCellBy(index: Int) {
         switch index {
         case 0:
-            ivMain.image = UIImage(named: "ski")
+            ivMain.cldSetImage(publicId: "Demo%20app%20content/content-aware-crop-4-ski_louxkt", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
             lbMain.text = "Smart Cropping"
         case 1:
-            ivMain.image = UIImage(named: "bag")
+            ivMain.cldSetImage(publicId: "Demo%20app%20content//layers-backpack_ruek7e", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
             lbMain.text = "Localization & branding"
         case 2:
-            ivMain.image = UIImage(named: "sofa")
+            ivMain.cldSetImage(publicId: "Demo%20app%20content/bgr-furniture-1_isnptj", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
             lbMain.text = "Background normalizing"
         case 3:
-            ivMain.image = UIImage(named: "lady")
+            ivMain.cldSetImage(publicId: "Demo%20app%20content/recolor-tshirt-5_omapls", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
             lbMain.text = "Color Alternation"
         default:
             break

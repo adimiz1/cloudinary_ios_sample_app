@@ -23,7 +23,6 @@ class TransformCollectionController: NSObject, UICollectionViewDelegate, UIColle
         self.delegate = delegate
     }
 
-    let cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "adimizrahi2", secure: true))
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         5

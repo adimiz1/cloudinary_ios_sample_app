@@ -12,19 +12,17 @@ class RevealImageController: UIViewController {
 
     @IBOutlet weak var ivMain: RevealImageView!
 
-    func setMainImageView(rightImage: UIImage?, leftImage: UIImage?) {
-        ivMain.rightImage = rightImage
-        ivMain.leftImage = leftImage
-//        ImageHelper.getImageFromURL(URL(string: "https://res.cloudinary.com/adimizrahi2/image/upload/f_jxl/dog5")!) { image in
-//            DispatchQueue.main.async {
-//                self.ivMain.rightImage = image
-//            }
-//        }
-//        ImageHelper.getImageFromURL(URL(string: "https://res.cloudinary.com/adimizrahi2/image/upload/f_jxl/dog5")!) { image in
-//            DispatchQueue.main.async {
-//                self.ivMain.leftImage = image
-//            }
-//        }
+    func setMainImageView(rightImage: String?, leftImage: String?) {
+        ImageHelper.getImageFromURL(URL(string: rightImage!)!) { image in
+            DispatchQueue.main.async {
+                self.ivMain.rightImage = image
+            }
+        }
+        ImageHelper.getImageFromURL(URL(string: leftImage!)!) { image in
+            DispatchQueue.main.async {
+                self.ivMain.leftImage = image
+            }
+        }
     }
 
 }
