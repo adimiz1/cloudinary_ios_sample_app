@@ -40,7 +40,7 @@ class VideoViewController: UIViewController {
     }
 
     private func setVideoFeedCollectionView() {
-        collectionController = VideoFeedCollectionController()
+        collectionController = VideoFeedCollectionController(self)
         cvVideoFeed.delegate = collectionController
         cvVideoFeed.dataSource = collectionController
     }
@@ -48,5 +48,14 @@ class VideoViewController: UIViewController {
     @objc func playerDidFinishPlaying(note: NSNotification) {
         player.seek(to: .zero) // Seek to the beginning of the video
         player.play()
+    }
+}
+
+extension VideoViewController: VideoFeedCollectionDelegate {
+    func cellClicked(_ index: Int) {
+        if let controller = UIStoryboard(name: "VideoFeed", bundle: nil).instantiateViewController(identifier: "MainPageController") as? MainPageController {
+            controller.modalPresentationStyle = .fullScreen
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 }

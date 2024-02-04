@@ -8,7 +8,18 @@
 import Foundation
 import UIKit
 
+protocol VideoFeedCollectionDelegate {
+    func cellClicked(_ index: Int)
+}
+
 class VideoFeedCollectionController: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    var delegate: VideoFeedCollectionDelegate
+
+    init(_ delegate: VideoFeedCollectionDelegate) {
+        self.delegate = delegate
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
@@ -22,6 +33,10 @@ class VideoFeedCollectionController: NSObject, UICollectionViewDelegate, UIColle
         cell.contentView.layer.masksToBounds = false
         return cell
     }
-    
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate.cellClicked(indexPath.row)
+    }
+
 
 }

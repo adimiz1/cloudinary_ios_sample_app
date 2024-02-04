@@ -1,8 +1,8 @@
 //
 //  VideoFeedController.swift
-//  iOS_Geekle_Conference
+//  Cloudinary_Sample_App
 //
-//  Created by Adi Mizrahi on 23/11/2023.
+//  Created by Adi Mizrahi on 04/02/2024.
 //
 
 import Foundation
