@@ -39,7 +39,7 @@ extension MainPageController: UIPageViewControllerDataSource {
      return nil // To show there is no previous page
     } else {
       // Previous UIViewController instance
-        guard let controller = videoControllersList[indexOfCurrentPageViewController - 1] as? VideoFeedViewController else {
+        guard let controller = videoControllersList[indexOfCurrentPageViewController - 1] as? VideoFeedContainerController else {
             return videoControllersList[indexOfCurrentPageViewController - 1]
         }
         controller.playVideo()
@@ -53,7 +53,7 @@ extension MainPageController: UIPageViewControllerDataSource {
       return nil // To show there is no next page
     } else {
       // Next UIViewController instance
-        guard let controller = videoControllersList[indexOfCurrentPageViewController + 1] as? VideoFeedViewController else {
+        guard let controller = videoControllersList[indexOfCurrentPageViewController + 1] as? VideoFeedContainerController else {
             return videoControllersList[indexOfCurrentPageViewController + 1]
         }
         controller.playVideo()

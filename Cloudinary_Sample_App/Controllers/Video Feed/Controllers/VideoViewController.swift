@@ -28,7 +28,7 @@ class VideoViewController: UIViewController {
     }
 
     private func setVideoView() {
-        player = CLDVideoPlayer(url: "https://res.cloudinary.com/mobiledemoapp/video/upload/v1706627663/Demo%20app%20content/001_Smart_Cropping_08_jkyizb.mp4")
+        player = CLDVideoPlayer(url: "https://res.cloudinary.com/mobiledemoapp/video/upload/v1706627936/Demo%20app%20content/sport-1_tjwumh.mp4")
         playerController = AVPlayerViewController()
         playerController.player = player
         addChild(playerController)
@@ -53,7 +53,7 @@ class VideoViewController: UIViewController {
 
 extension VideoViewController: VideoFeedCollectionDelegate {
     func cellClicked(_ index: Int) {
-        if let controller = UIStoryboard(name: "VideoFeed", bundle: nil).instantiateViewController(identifier: "MainPageController") as? MainPageController {
+        if let controller = UIStoryboard(name: "VideoFeed", bundle: nil).instantiateViewController(identifier: "VideoFeedController") as? VideoFeedController {
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
         }
