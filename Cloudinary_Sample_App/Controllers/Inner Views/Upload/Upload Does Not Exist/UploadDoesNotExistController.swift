@@ -18,7 +18,7 @@ class UploadDoesNotExistController: UIViewController {
 
     var type: UploadViewType = .Upload
 
-    var cloudinary = CloudinaryHelper.shared.cloudinary
+    var cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,7 +49,7 @@ class UploadDoesNotExistController: UIViewController {
 
     func uploadImage(_ image: UIImage) {
         let data = image.pngData()
-        cloudinary.createUploader().upload(data: data!, uploadPreset: "ios_sample", completionHandler:  { response, _ in
+        cloudinary.createUploader().upload(data: data!, uploadPreset: "ios_sample", completionHandler:  { response, error in
             DispatchQueue.main.async {
                 self.delegate.switchToController(.UploadExist, url: response?.secureUrl)
             }
@@ -59,7 +59,7 @@ class UploadDoesNotExistController: UIViewController {
     func uploadVideo(_ url: NSURL) {
         let params = CLDUploadRequestParams()
         params.setResourceType("video")
-        cloudinary.createUploader().upload(url: url as URL, uploadPreset: "ios_sample", params: params) { response, error in
+        cloudinary.createUploader().upload(url: url as URL, uploadPreset: "ml_default", params: params) { response, error in
             DispatchQueue.main.async {
                 self.delegate.switchToController(.UploadExist, url: response?.secureUrl)
             }

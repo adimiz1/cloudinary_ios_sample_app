@@ -16,4 +16,18 @@ class CloudinaryHelper {
     init() {
         cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: "mobiledemoapp", secure: true))
     }
+
+    func setUploadCloud(_ cloudName: String?) {
+        guard let cloudName = cloudName else {
+            return
+        }
+        UserDefaults.standard.set(cloudName, forKey: "uploadCloudName")
+    }
+
+    func getUploadCloud() -> String? {
+        guard let cloudName = UserDefaults.standard.value(forKey: "uploadCloudName") as? String else {
+            return nil
+        }
+        return cloudName
+    }
 }

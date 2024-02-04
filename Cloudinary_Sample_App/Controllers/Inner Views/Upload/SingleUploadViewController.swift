@@ -98,7 +98,7 @@ class SingleUploadViewController: UIViewController {
     func uploadImage(_ image: UIImage) {
         addUploadingView()
         let data = image.pngData()
-        cloudinary.createUploader().upload(data: data!, uploadPreset: "ios_sample", completionHandler:  { response, _ in
+        cloudinary.createUploader().upload(data: data!, uploadPreset: "ml_default", completionHandler:  { response, error in
             DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.3) {
                     self.ivMain.cldSetImage( response!.secureUrl!, cloudinary: self.cloudinary)

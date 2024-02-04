@@ -31,7 +31,7 @@ class UploadWidgetViewController: UIViewController {
 
     @objc func openUploadWidget() {
         let configuration = CLDWidgetConfiguration(
-          uploadType: CLDUploadType(signed: false, preset: "ios_sample"))
+          uploadType: CLDUploadType(signed: false, preset: "ml_default"))
 
         uploadWidget = CLDUploaderWidget(
           cloudinary: cloudinary,

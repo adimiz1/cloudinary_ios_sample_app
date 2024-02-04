@@ -30,6 +30,8 @@
 		B63AA90A2B6F900F008B4FA8 /* VideoSocialOverlays.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63AA9092B6F900F008B4FA8 /* VideoSocialOverlays.storyboard */; };
 		B63AA90C2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA90B2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift */; };
 		B63AA90E2B6F9E33008B4FA8 /* VideoFeedContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA90D2B6F9E33008B4FA8 /* VideoFeedContainerController.swift */; };
+		B63AA9102B6FA2D0008B4FA8 /* UploadNoCloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */; };
+		B63AA9122B6FB664008B4FA8 /* UploadNoCloudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */; };
 		B63F369F2B3BFF0300A82C49 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F369E2B3BFF0300A82C49 /* GradientView.swift */; };
 		B63F36A12B3C000A00A82C49 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63F36A02B3C000A00A82C49 /* Splash.storyboard */; };
 		B63F36A32B3C02C800A82C49 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F36A22B3C02C800A82C49 /* SplashViewController.swift */; };
@@ -105,6 +107,8 @@
 		B63AA9092B6F900F008B4FA8 /* VideoSocialOverlays.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoSocialOverlays.storyboard; sourceTree = "<group>"; };
 		B63AA90B2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSocialOverlaysController.swift; sourceTree = "<group>"; };
 		B63AA90D2B6F9E33008B4FA8 /* VideoFeedContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedContainerController.swift; sourceTree = "<group>"; };
+		B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadNoCloud.storyboard; sourceTree = "<group>"; };
+		B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadNoCloudController.swift; sourceTree = "<group>"; };
 		B63F369E2B3BFF0300A82C49 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B63F36A02B3C000A00A82C49 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		B63F36A22B3C02C800A82C49 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +380,7 @@
 				B64036EF2B4FF1590018A023 /* SingleUploadViewController.swift */,
 				B665FED12B3D746500452FC6 /* InnerUploadFrame.swift */,
 				B6EEAD6B2B692FB1000A745E /* UploadChoiceController.swift */,
+				B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 			children = (
 				B665FECC2B3D6E2400452FC6 /* Upload.storyboard */,
 				B665FECE2B3D73B000452FC6 /* InnerUploadFrame.xib */,
+				B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -629,6 +635,7 @@
 				B61488642AAF3AE000002289 /* Main.storyboard in Resources */,
 				B63F36A62B3C16BD00A82C49 /* Toolbar.xib in Resources */,
 				B63F36AA2B3C2BB400A82C49 /* ToolbarItem.xib in Resources */,
+				B63AA9102B6FA2D0008B4FA8 /* UploadNoCloud.storyboard in Resources */,
 				B665FEC82B3D508B00452FC6 /* Delivery.storyboard in Resources */,
 				B69FA1D92AB86307001D361F /* Optimization.storyboard in Resources */,
 				B665FECD2B3D6E2400452FC6 /* Upload.storyboard in Resources */,
@@ -651,6 +658,7 @@
 				B6BD44D32B46D9C100DD6AA6 /* BaseViewController.swift in Sources */,
 				B61488932AB06CA800002289 /* TransformViewController.swift in Sources */,
 				B63F36AD2B3C2C0500A82C49 /* ToolbarItem.swift in Sources */,
+				B63AA9122B6FB664008B4FA8 /* UploadNoCloudController.swift in Sources */,
 				B6BD44DB2B4BF6AE00DD6AA6 /* RevealImageView.swift in Sources */,
 				B63AA90E2B6F9E33008B4FA8 /* VideoFeedContainerController.swift in Sources */,
 				B61488612AAF3AE000002289 /* MainViewController.swift in Sources */,

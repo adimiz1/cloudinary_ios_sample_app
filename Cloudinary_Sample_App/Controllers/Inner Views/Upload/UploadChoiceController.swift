@@ -22,13 +22,24 @@ class UploadChoiceController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setContainerView(.NoUpload)
+        if CloudinaryHelper.shared.getUploadCloud() == nil {
+            setContainerView(.NoCloudName)
+        } else {
+            setContainerView(.NoUpload)
+        }
     }
 
     private func setContainerView(_ uploadState: UploadChoiceState, url: String? = nil) {
         removeCurrentController()
         switch uploadState {
         case .NoCloudName:
+            currentController = UIStoryboard(name: "UploadNoCloud", bundle: nil).instantiateViewController(identifier: "UploadNoCloudController")
+            (currentController as! UploadNoCloudController).delegate = self
+            currentController.modalPresentationStyle = .fullScreen
+            self.present(currentController, animated: true)
+//            addChild(currentController)
+//            vwContainer.addSubview(currentController.view)
+//            currentController.didMove(toParent: self)
             break
         case .NoUpload:
             currentController = UIStoryboard(name: "UploadDoesNotExist", bundle: nil).instantiateViewController(identifier: "UploadDoesNotExistController")
@@ -38,7 +49,6 @@ class UploadChoiceController: UIViewController {
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            break
         case .UploadExist:
             currentController = UIStoryboard(name: "SingleUpload", bundle: nil).instantiateViewController(identifier: "SingleUploadViewController")
             currentController.view.frame = vwContainer.bounds
@@ -48,7 +58,6 @@ class UploadChoiceController: UIViewController {
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            break
         }
     }
 
