@@ -26,6 +26,11 @@ class DeliveryViewController: UIViewController {
         setUseCasesCollectionView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        EventsHandler.shared.logEvent(event: EventObject(name: "Transform"))
+    }
+
     private func setOptimizationView() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(optimizationClicked))
         vwOptimization.addGestureRecognizer(tapGesture)

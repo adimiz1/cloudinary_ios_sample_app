@@ -20,6 +20,7 @@ class TransformViewController: UIViewController {
         super.viewWillAppear(animated)
         setCollectionView()
         setContainerView(.SmartCropping)
+        EventsHandler.shared.logEvent(event: EventObject(name: "Inner Trasnform"))
     }
 
     private func setContainerView(_ type: TransformContainerType) {

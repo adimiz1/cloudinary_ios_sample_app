@@ -23,6 +23,11 @@ class UploadDoesNotExistController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUploadImageView()
+        if type == .UploadLarge {
+            EventsHandler.shared.logEvent(event: EventObject(name: "Upload Large"))
+        } else {
+            EventsHandler.shared.logEvent(event: EventObject(name: "Upload"))
+        }
     }
 
     func setUploadImageView() {

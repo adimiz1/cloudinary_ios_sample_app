@@ -22,6 +22,7 @@ class ImageWidgetViewController: UIViewController {
         setLocalImage()
         setRemoteImage()
         setCloudinaryImage()
+        EventsHandler.shared.logEvent(event: EventObject(name: "Image Widget"))
     }
 
     private func setLocalImage() {

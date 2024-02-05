@@ -33,6 +33,11 @@ class SingleUploadViewController: UIViewController {
         super.viewWillAppear(animated)
         setOpenGalleryView()
         setMainView()
+        if type == .UploadLarge {
+            EventsHandler.shared.logEvent(event: EventObject(name: "Upload Large"))
+        } else {
+            EventsHandler.shared.logEvent(event: EventObject(name: "Upload"))
+        }
     }
 
     private func setMainView() {

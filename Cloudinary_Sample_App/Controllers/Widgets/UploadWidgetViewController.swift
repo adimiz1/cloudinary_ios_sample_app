@@ -22,6 +22,11 @@ class UploadWidgetViewController: UIViewController {
         setUploadButton()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        EventsHandler.shared.logEvent(event: EventObject(name: "Upload Widget"))
+    }
+
 
     func setUploadButton() {
         vwOpenGallery.layer.cornerRadius = vwOpenGallery.frame.height / 2

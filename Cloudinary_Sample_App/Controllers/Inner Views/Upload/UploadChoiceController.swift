@@ -37,9 +37,6 @@ class UploadChoiceController: UIViewController {
             (currentController as! UploadNoCloudController).delegate = self
             currentController.modalPresentationStyle = .fullScreen
             self.present(currentController, animated: true)
-//            addChild(currentController)
-//            vwContainer.addSubview(currentController.view)
-//            currentController.didMove(toParent: self)
             break
         case .NoUpload:
             currentController = UIStoryboard(name: "UploadDoesNotExist", bundle: nil).instantiateViewController(identifier: "UploadDoesNotExistController")

@@ -21,10 +21,16 @@ class VideoViewController: UIViewController {
     var playerController: AVPlayerViewController!
     var player: CLDVideoPlayer!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setVideoView()
         setVideoFeedCollectionView()
+        EventsHandler.shared.logEvent(event: EventObject(name: "Video"))
     }
 
     private func setVideoView() {

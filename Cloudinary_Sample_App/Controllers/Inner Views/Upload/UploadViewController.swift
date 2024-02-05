@@ -18,11 +18,13 @@ class UploadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setViews()
+        EventsHandler.shared.logEvent(event: EventObject(name: "Upload"))
     }
 
     private func setViews() {

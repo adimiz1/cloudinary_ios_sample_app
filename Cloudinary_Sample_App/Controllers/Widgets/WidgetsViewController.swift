@@ -30,6 +30,7 @@ class WidgetsViewController: UIViewController {
         super.viewWillAppear(animated)
         setUploadWidgetVideo()
         setImageWidgetVideo()
+        EventsHandler.shared.logEvent(event: EventObject(name: "Widgets"))
     }
 
     private func setImageWidgetVideo() {

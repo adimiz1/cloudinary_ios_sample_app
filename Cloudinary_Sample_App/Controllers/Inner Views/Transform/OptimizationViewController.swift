@@ -34,6 +34,11 @@ class OptimizationViewController: UIViewController {
         super.viewWillAppear(animated)
         setOriginalImageView()
         setOptimizedImageView()
+        if type == .FetchUpload {
+            EventsHandler.shared.logEvent(event: EventObject(name: "Fetch"))
+        } else {
+            EventsHandler.shared.logEvent(event: EventObject(name: "Transform"))
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

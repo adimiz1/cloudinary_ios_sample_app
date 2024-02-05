@@ -22,6 +22,11 @@ class UploadNoCloudController: UIViewController {
         setCantFindCloudView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        EventsHandler.shared.logEvent(event: EventObject(name: "Upload No Cloud"))
+    }
+
     private func setGetStratedView() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(getStratedTap))
 

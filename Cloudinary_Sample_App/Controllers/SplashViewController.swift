@@ -14,6 +14,7 @@ class SplashViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
             self.transitionToMainController()
         }
+        EventsHandler.shared.logEvent(event: EventObject(name: "Splash"))
     }
 
     func transitionToMainController() {

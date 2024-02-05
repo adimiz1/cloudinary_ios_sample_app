@@ -22,7 +22,7 @@ class VideoFeedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        EventsHandler.shared.logEvent(event: EventObject(name: "Video Feed"))
     }
     
     override func viewDidAppear(_ animated: Bool) {
