@@ -21,9 +21,9 @@ The application has the following samples:
 ## Configuration
 Once you clone this repository there are two required steps to build the sample app:
 1. Configure your Cloudinary cloud name for the app:
-    * Once you open the upload controller you'll be asked to enter your cloud name, you can find your cloud name [here](https://cloudinary.com/documentation/how_to_integrate_cloudinary#create_and_explore_your_account)
+    * Once you open the upload controller you'll be asked to enter your cloud name, you can find your cloud name at the top of your [dashboard.](https://console.cloudinary.com/pm/developer-dashboard)
 2. Create an upload preset named 'sample_app_preset' in your cloudinary account console:
     *  Login to your [Cloudinary console](https://cloudinary.com/console), go to settings>upload, scroll down
-      to Upload Presets and click `Add upload preset`. Alternatively, head directly to the [new preset page](https://cloudinary.com/console/lui/upload_presets/new).
+      to Upload Presets and click `Add upload preset`. Alternatively, head directly to the [new preset page](https://console.cloudinary.com/console/upload_presets/new).
     * Type in `ios_sample` as the name and save, leaving all the fields with their default values.
     
