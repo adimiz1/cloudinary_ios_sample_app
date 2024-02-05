@@ -236,9 +236,9 @@
                     </view>
                     <connections>
                         <outlet property="vwImageWidget" destination="2dg-7g-lUB" id="lq3-TD-lca"/>
-                        <outlet property="vwImageWidgetVideo" destination="mIa-dZ-5Ky" id="tkW-MO-agv"/>
+                        <outlet property="vwImageWidgetVideo" destination="FKM-Uc-P5d" id="3dS-y3-td5"/>
                         <outlet property="vwUploadWidget" destination="6HE-Wd-Jya" id="qBW-JL-O9W"/>
-                        <outlet property="vwUploadWidgetVideo" destination="FKM-Uc-P5d" id="BFa-F9-0cT"/>
+                        <outlet property="vwUploadWidgetVideo" destination="mIa-dZ-5Ky" id="F4t-6u-Qh3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
