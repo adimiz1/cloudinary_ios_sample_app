@@ -25,5 +25,5 @@ Once you clone this repository there are two required steps to build the sample 
 2. Create an upload preset named 'sample_app_preset' in your cloudinary account console:
     *  Login to your [Cloudinary console](https://cloudinary.com/console), go to settings>upload, scroll down
       to Upload Presets and click `Add upload preset`. Alternatively, head directly to the [new preset page](https://cloudinary.com/console/lui/upload_presets/new).
-    * Type in `android_sample` as the name and save, leaving all the fields with their default values.
+    * Type in `ios_sample` as the name and save, leaving all the fields with their default values.
     
