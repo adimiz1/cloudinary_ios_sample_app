@@ -15,8 +15,8 @@ The application has the following samples:
    1. Upload Widget
    2. Image Widget
 4. Video
-   3. Video Widget   
-   4. Video Feed
+    1. Video Widget
+    2. Video feed
 
 ## Configuration
 Once you clone this repository there are two required steps to build the sample app:
