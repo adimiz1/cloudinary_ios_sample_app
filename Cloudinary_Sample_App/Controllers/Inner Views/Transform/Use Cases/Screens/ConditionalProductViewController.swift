@@ -25,5 +25,7 @@ class ConditionalProductViewController: UIViewController {
         ivTopLeft.cldSetImage(publicId: "Group_15_jda5ms", cloudinary: CloudinaryHelper.shared.cloudinary)
 
         ivTopRight.cldSetImage(publicId: "tshirt4_1_si0swc", cloudinary: CloudinaryHelper.shared.cloudinary)
+
+        ivBottom.cldSetImage(publicId: "tshirt4_1_si0swc", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setOverlayWithLayer(CLDLayer().setPublicId(publicId: "Group_15_jda5ms")).setGravity(.northWest).setWidth(0.4).setX(10).setY(10))
     }
 }
