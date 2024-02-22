@@ -40,7 +40,7 @@ class TransformCollectionController: NSObject, UICollectionViewDelegate, UIColle
         delegate.cellSelected(indexPath.row)
     }
 
-    private func setSelectedCell(_ cell: TransformCollectionCell, index: Int) {
+    func setSelectedCell(_ cell: TransformCollectionCell, index: Int) {
         if index == selectedCellIndex {
             cell.isSelected = true
             cell.layer.borderColor = UIColor(named: "primary")?.cgColor

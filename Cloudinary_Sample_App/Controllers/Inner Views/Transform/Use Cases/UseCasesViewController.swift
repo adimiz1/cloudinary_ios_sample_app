@@ -13,6 +13,8 @@ class UseCasesViewController: UIViewController {
     @IBOutlet weak var vwContainer: UIView!
     @IBOutlet weak var cvMain: UICollectionView!
 
+    var innerIndex: Int = 0
+
     var currentController: UIViewController!
 
     var collectionController: UseCasesCollectionController!
@@ -20,8 +22,23 @@ class UseCasesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setCollectionView()
-        setContainerView(.NormalizingProductAssets)
+        setContainerView(innerIndexToType(innerIndex))
         EventsHandler.shared.logEvent(event: EventObject(name: "Use Cases"))
+    }
+
+    private func innerIndexToType(_ index: Int) -> UseCaseContainerType {
+        switch index {
+        case 0:
+            return .NormalizingProductAssets
+        case 1:
+            return .ConditionalProduct
+        case 2:
+            return .AdaptVideo
+        case 3:
+            return .IntegrateAI
+        default:
+            return .NormalizingProductAssets
+        }
     }
 
     private func setCollectionView() {
@@ -49,17 +66,19 @@ class UseCasesViewController: UIViewController {
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
+            collectionController.selectedCellIndex = 0
         case .ConditionalProduct:
             currentController = UIStoryboard(name: "ConditionalProduct", bundle: nil).instantiateViewController(identifier: "ConditionalProductViewController")
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
+            collectionController.selectedCellIndex = 1
             break
         case .AdaptVideo:
-            break
+            collectionController.selectedCellIndex = 2
         case .IntegrateAI:
-            break
+            collectionController.selectedCellIndex = 3
         }
     }
 

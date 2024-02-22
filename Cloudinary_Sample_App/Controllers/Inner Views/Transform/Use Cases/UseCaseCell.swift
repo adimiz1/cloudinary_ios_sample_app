@@ -19,6 +19,10 @@ class UseCaseCell: UICollectionViewCell {
             lbMain.text = "Normalizing Product Assets - Sizing"
         case 1:
             lbMain.text = "Conditional Product Badging"
+        case 2:
+            lbMain.text = "Adapt video to any screen"
+        case 3:
+            lbMain.text = "Integrate AI-generated backgrounds"
         default:
             break
         }

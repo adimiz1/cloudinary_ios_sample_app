@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var vwBack: UIView!
     var type: BaseControllerType!
+    var innerIndex: Int = 0
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -67,14 +68,16 @@ class BaseViewController: UIViewController {
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
         case .Transform:
-            let currentController = UIStoryboard(name: "Transform", bundle: nil).instantiateViewController(identifier: "TransformViewController")
+            let currentController = UIStoryboard(name: "Transform", bundle: nil).instantiateViewController(identifier: "TransformViewController") as! TransformViewController
+            currentController.innerIndex = innerIndex
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
         case .UseCases:
-            let currentController = UIStoryboard(name: "UseCases", bundle: nil).instantiateViewController(identifier: "UseCasesViewController")
+            let currentController = UIStoryboard(name: "UseCases", bundle: nil).instantiateViewController(identifier: "UseCasesViewController") as! UseCasesViewController
             currentController.view.frame = vwContainer.bounds
+            currentController.innerIndex = innerIndex
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)

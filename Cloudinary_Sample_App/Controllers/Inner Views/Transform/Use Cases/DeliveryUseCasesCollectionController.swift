@@ -8,9 +8,20 @@
 import Foundation
 import UIKit
 
+protocol DeliverUseCaseCollectionDelegate {
+    func useCaseCellSelected(_ index: Int)
+}
+
 class DeliveryUseCasesCollectionController: NSObject,  UICollectionViewDelegate, UICollectionViewDataSource {
+
+    var delegate: DeliverUseCaseCollectionDelegate
+
+    init(_ delegate: DeliverUseCaseCollectionDelegate) {
+        self.delegate = delegate
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -18,6 +29,8 @@ class DeliveryUseCasesCollectionController: NSObject,  UICollectionViewDelegate,
         cell.setCellBy(index: indexPath.row)
         return cell
     }
-    
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate.useCaseCellSelected(indexPath.row)
+    }
 }

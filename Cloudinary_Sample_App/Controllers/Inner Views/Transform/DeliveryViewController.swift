@@ -22,30 +22,14 @@ class DeliveryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setOptimizationView()
-        setTransformView()
-        setUseCasesView()
         setTransformationCollectionView()
         setUseCasesCollectionView()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        EventsHandler.shared.logEvent(event: EventObject(name: "Transform"))
-    }
-
     private func setOptimizationView() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(optimizationClicked))
+
         vwOptimization.addGestureRecognizer(tapGesture)
-    }
-
-    private func setTransformView() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(transformClicked))
-        vwTransform.addGestureRecognizer(tapGesture)
-    }
-
-    private func setUseCasesView() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(useCasesClicked))
-        vwUseCases.addGestureRecognizer(tapGesture)
     }
 
     @objc private func optimizationClicked() {
@@ -56,16 +40,18 @@ class DeliveryViewController: UIViewController {
         }
     }
 
-    @objc private func transformClicked() {
+    @objc private func transformClicked(_ index: Int) {
         if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
             controller.type = .Transform
+            controller.innerIndex = index
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
         }
     }
 
-    @objc private func useCasesClicked() {
+    @objc private func useCasesClicked(_ index: Int) {
         if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
+            controller.innerIndex = index
             controller.type = .UseCases
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
@@ -73,14 +59,26 @@ class DeliveryViewController: UIViewController {
     }
 
     private func setTransformationCollectionView() {
-        transfromationCollectionController = DeliveryTransformCollectionController()
+        transfromationCollectionController = DeliveryTransformCollectionController(self)
         cvTransformation.dataSource = transfromationCollectionController
         cvTransformation.delegate = transfromationCollectionController
     }
 
     private func setUseCasesCollectionView() {
-        useCasesCollectionController = DeliveryUseCasesCollectionController()
+        useCasesCollectionController = DeliveryUseCasesCollectionController(self)
         cvUseCases.delegate = useCasesCollectionController
         cvUseCases.dataSource = useCasesCollectionController
+    }
+}
+
+extension DeliveryViewController: DeliveryTransformCollectionDelegate {
+    func transformCellSelected(_ index: Int) {
+        transformClicked(index)
+    }
+}
+
+extension DeliveryViewController: DeliverUseCaseCollectionDelegate {
+    func useCaseCellSelected(_ index: Int) {
+        useCasesClicked(index)
     }
 }

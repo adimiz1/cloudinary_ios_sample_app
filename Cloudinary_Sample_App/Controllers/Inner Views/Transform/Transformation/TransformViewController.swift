@@ -16,13 +16,30 @@ class TransformViewController: UIViewController {
 
     var currentController: UIViewController!
 
+    var innerIndex: Int = 0
+
     var collectionController: TransformCollectionController!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setCollectionView()
-        setContainerView(.SmartCropping)
+        setContainerView(innerIndexToType(innerIndex))
         EventsHandler.shared.logEvent(event: EventObject(name: "Inner Trasnform"))
+    }
+
+    private func innerIndexToType(_ index: Int) -> TransformContainerType {
+        switch index {
+        case 0:
+            return .SmartCropping
+        case 1:
+            return .TextLayer
+        case 2:
+            return .BackgroundRemoval
+        case 3:
+            return .ReColor
+        default:
+            return .SmartCropping
+        }
     }
 
     private func setContainerView(_ type: TransformContainerType) {
@@ -34,6 +51,7 @@ class TransformViewController: UIViewController {
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
+            collectionController.selectedCellIndex = 0
         case .TextLayer:
             currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController")
             currentController.view.frame = vwContainer.bounds
@@ -43,6 +61,7 @@ class TransformViewController: UIViewController {
             (currentController as! RevealImageController).setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation()
                 .setOverlay("text:Arial_72:NEW%2520COLLECTION").setColor("white").chain()
                 .setFlags("layer_apply").setGravity("center")).generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"))
+            collectionController.selectedCellIndex = 1
         case .BackgroundRemoval:
             currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
@@ -50,6 +69,7 @@ class TransformViewController: UIViewController {
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
             (currentController as! RevealImageController).setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/bgr-furniture-1_isnptj"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("background_removal")).generate("Demo%20app%20content/bgr-furniture-1_isnptj"))
+            collectionController.selectedCellIndex = 2
         case .ReColor:
             currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
@@ -57,6 +77,7 @@ class TransformViewController: UIViewController {
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
             (currentController as! RevealImageController).setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/recolor-tshirt-5_omapls"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("gen_recolor:prompt_t-shirt;to-color_8fbc8f")).generate("Demo%20app%20content/recolor-tshirt-5_omapls"))
+            collectionController.selectedCellIndex = 3
         }
     }
 
