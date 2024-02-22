@@ -11,6 +11,7 @@ import UIKit
 class DeliveryViewController: UIViewController {
     @IBOutlet weak var vwOptimization: UIView!
     @IBOutlet weak var vwTransform: UIView!
+    @IBOutlet weak var vwUseCases: UIView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var cvTransformation: UICollectionView!
     @IBOutlet weak var cvUseCases: UICollectionView!
@@ -22,6 +23,7 @@ class DeliveryViewController: UIViewController {
         super.viewDidLoad()
         setOptimizationView()
         setTransformView()
+        setUseCasesView()
         setTransformationCollectionView()
         setUseCasesCollectionView()
     }
@@ -41,6 +43,11 @@ class DeliveryViewController: UIViewController {
         vwTransform.addGestureRecognizer(tapGesture)
     }
 
+    private func setUseCasesView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(useCasesClicked))
+        vwUseCases.addGestureRecognizer(tapGesture)
+    }
+
     @objc private func optimizationClicked() {
         if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
             controller.type = .Optimization
@@ -52,6 +59,14 @@ class DeliveryViewController: UIViewController {
     @objc private func transformClicked() {
         if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
             controller.type = .Transform
+            controller.modalPresentationStyle = .fullScreen
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+
+    @objc private func useCasesClicked() {
+        if let controller = UIStoryboard(name: "Base", bundle: nil).instantiateViewController(identifier: "BaseViewController") as? BaseViewController {
+            controller.type = .UseCases
             controller.modalPresentationStyle = .fullScreen
             self.present(controller, animated: true, completion: nil)
         }

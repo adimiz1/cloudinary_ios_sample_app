@@ -26,6 +26,7 @@
 		B61A1DE72B70D5CA00C2C9D6 /* FirebaseEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A1DE62B70D5CA00C2C9D6 /* FirebaseEventsHandler.swift */; };
 		B61A1DE92B70D5F900C2C9D6 /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A1DE82B70D5F900C2C9D6 /* EventsProvider.swift */; };
 		B61A1DEB2B70D62E00C2C9D6 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A1DEA2B70D62E00C2C9D6 /* EventObject.swift */; };
+		B61AFA602B87204800991A57 /* ConditionalProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61AFA5F2B87204800991A57 /* ConditionalProductViewController.swift */; };
 		B621F01C2B69002A00095019 /* DeliveryTransformCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */; };
 		B621F01F2B69016E00095019 /* DeliveryUseCasesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */; };
 		B621F0212B6901A300095019 /* UseCaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F0202B6901A300095019 /* UseCaseCell.swift */; };
@@ -35,6 +36,13 @@
 		B621F02B2B6919D600095019 /* RevealImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F02A2B6919D600095019 /* RevealImageController.swift */; };
 		B621F02E2B691E6000095019 /* UploadDoesNotExist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B621F02D2B691E6000095019 /* UploadDoesNotExist.storyboard */; };
 		B621F0312B69204B00095019 /* UploadDoesNotExistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F0302B69204B00095019 /* UploadDoesNotExistController.swift */; };
+		B62824FA2B85EBF1006BA8AF /* UseCases.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62824F92B85EBF1006BA8AF /* UseCases.storyboard */; };
+		B62824FC2B85EC11006BA8AF /* UseCasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62824FB2B85EC11006BA8AF /* UseCasesViewController.swift */; };
+		B62824FE2B86175F006BA8AF /* UseCasesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62824FD2B86175F006BA8AF /* UseCasesCollectionController.swift */; };
+		B62825012B8618FD006BA8AF /* UseCaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62825002B8618FD006BA8AF /* UseCaseCollectionCell.swift */; };
+		B62825042B862D5F006BA8AF /* NormalizingProductAssets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62825032B862D5F006BA8AF /* NormalizingProductAssets.storyboard */; };
+		B62825072B863342006BA8AF /* NormalizingProductAssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62825062B863342006BA8AF /* NormalizingProductAssetsViewController.swift */; };
+		B62825092B863563006BA8AF /* ConditionalProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62825082B863563006BA8AF /* ConditionalProduct.storyboard */; };
 		B63AA90A2B6F900F008B4FA8 /* VideoSocialOverlays.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63AA9092B6F900F008B4FA8 /* VideoSocialOverlays.storyboard */; };
 		B63AA90C2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA90B2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift */; };
 		B63AA90E2B6F9E33008B4FA8 /* VideoFeedContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA90D2B6F9E33008B4FA8 /* VideoFeedContainerController.swift */; };
@@ -108,6 +116,7 @@
 		B61A1DE62B70D5CA00C2C9D6 /* FirebaseEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEventsHandler.swift; sourceTree = "<group>"; };
 		B61A1DE82B70D5F900C2C9D6 /* EventsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProvider.swift; sourceTree = "<group>"; };
 		B61A1DEA2B70D62E00C2C9D6 /* EventObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
+		B61AFA5F2B87204800991A57 /* ConditionalProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalProductViewController.swift; sourceTree = "<group>"; };
 		B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTransformCollectionController.swift; sourceTree = "<group>"; };
 		B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryUseCasesCollectionController.swift; sourceTree = "<group>"; };
 		B621F0202B6901A300095019 /* UseCaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCell.swift; sourceTree = "<group>"; };
@@ -117,6 +126,13 @@
 		B621F02A2B6919D600095019 /* RevealImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealImageController.swift; sourceTree = "<group>"; };
 		B621F02D2B691E6000095019 /* UploadDoesNotExist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadDoesNotExist.storyboard; sourceTree = "<group>"; };
 		B621F0302B69204B00095019 /* UploadDoesNotExistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDoesNotExistController.swift; sourceTree = "<group>"; };
+		B62824F92B85EBF1006BA8AF /* UseCases.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UseCases.storyboard; sourceTree = "<group>"; };
+		B62824FB2B85EC11006BA8AF /* UseCasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesViewController.swift; sourceTree = "<group>"; };
+		B62824FD2B86175F006BA8AF /* UseCasesCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesCollectionController.swift; sourceTree = "<group>"; };
+		B62825002B8618FD006BA8AF /* UseCaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCollectionCell.swift; sourceTree = "<group>"; };
+		B62825032B862D5F006BA8AF /* NormalizingProductAssets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NormalizingProductAssets.storyboard; sourceTree = "<group>"; };
+		B62825062B863342006BA8AF /* NormalizingProductAssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizingProductAssetsViewController.swift; sourceTree = "<group>"; };
+		B62825082B863563006BA8AF /* ConditionalProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConditionalProduct.storyboard; sourceTree = "<group>"; };
 		B63AA9092B6F900F008B4FA8 /* VideoSocialOverlays.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoSocialOverlays.storyboard; sourceTree = "<group>"; };
 		B63AA90B2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSocialOverlaysController.swift; sourceTree = "<group>"; };
 		B63AA90D2B6F9E33008B4FA8 /* VideoFeedContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedContainerController.swift; sourceTree = "<group>"; };
@@ -274,6 +290,11 @@
 		B621F01A2B69001E00095019 /* Transformation */ = {
 			isa = PBXGroup;
 			children = (
+				B621F0292B6919C800095019 /* Reveal Image */,
+				B621F0222B6907F300095019 /* Smart Cropping */,
+				B61488922AB06CA800002289 /* TransformViewController.swift */,
+				B6BD44D62B4BD1A100DD6AA6 /* TransformCollectionCell.swift */,
+				B6BD44D82B4BD22E00DD6AA6 /* TransformCollectionController.swift */,
 				B64F9F562B68FE7200762F97 /* TransformationCell.swift */,
 				B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */,
 			);
@@ -283,8 +304,12 @@
 		B621F01D2B69016200095019 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				B62825052B86332A006BA8AF /* Screens */,
+				B62824FB2B85EC11006BA8AF /* UseCasesViewController.swift */,
 				B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */,
 				B621F0202B6901A300095019 /* UseCaseCell.swift */,
+				B62824FD2B86175F006BA8AF /* UseCasesCollectionController.swift */,
+				B62825002B8618FD006BA8AF /* UseCaseCollectionCell.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -311,6 +336,32 @@
 				B621F0302B69204B00095019 /* UploadDoesNotExistController.swift */,
 			);
 			path = "Upload Does Not Exist";
+			sourceTree = "<group>";
+		};
+		B62824FF2B8618DD006BA8AF /* Optimization */ = {
+			isa = PBXGroup;
+			children = (
+				B69FA1DA2AB8631A001D361F /* OptimizationViewController.swift */,
+			);
+			path = Optimization;
+			sourceTree = "<group>";
+		};
+		B62825022B862D41006BA8AF /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				B62825032B862D5F006BA8AF /* NormalizingProductAssets.storyboard */,
+				B62825082B863563006BA8AF /* ConditionalProduct.storyboard */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		B62825052B86332A006BA8AF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B62825062B863342006BA8AF /* NormalizingProductAssetsViewController.swift */,
+				B61AFA5F2B87204800991A57 /* ConditionalProductViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		B63AA9062B6F8FF7008B4FA8 /* Social */ = {
@@ -519,15 +570,10 @@
 		B6BD44D52B4BD19100DD6AA6 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				B62824FF2B8618DD006BA8AF /* Optimization */,
 				B621F01D2B69016200095019 /* Use Cases */,
 				B621F01A2B69001E00095019 /* Transformation */,
 				B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */,
-				B69FA1DA2AB8631A001D361F /* OptimizationViewController.swift */,
-				B61488922AB06CA800002289 /* TransformViewController.swift */,
-				B621F0292B6919C800095019 /* Reveal Image */,
-				B621F0222B6907F300095019 /* Smart Cropping */,
-				B6BD44D62B4BD1A100DD6AA6 /* TransformCollectionCell.swift */,
-				B6BD44D82B4BD22E00DD6AA6 /* TransformCollectionController.swift */,
 			);
 			path = Transform;
 			sourceTree = "<group>";
@@ -562,8 +608,10 @@
 		B6EEAD9B2B6BB340000A745E /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				B62825022B862D41006BA8AF /* Use Cases */,
 				B665FEC72B3D508B00452FC6 /* Delivery.storyboard */,
 				B69FA1D82AB86307001D361F /* Optimization.storyboard */,
+				B62824F92B85EBF1006BA8AF /* UseCases.storyboard */,
 			);
 			path = Transform;
 			sourceTree = "<group>";
@@ -657,6 +705,7 @@
 				B61488732AAF3B2200002289 /* Colors.xcassets in Resources */,
 				B63F36A12B3C000A00A82C49 /* Splash.storyboard in Resources */,
 				B64036F22B4FF7130018A023 /* SingleUpload.storyboard in Resources */,
+				B62825092B863563006BA8AF /* ConditionalProduct.storyboard in Resources */,
 				B6BD44D02B45972B00DD6AA6 /* Base.storyboard in Resources */,
 				B6BAAA362AB9772D0012D8A8 /* ImageWidget.storyboard in Resources */,
 				B621F02E2B691E6000095019 /* UploadDoesNotExist.storyboard in Resources */,
@@ -666,6 +715,8 @@
 				B61488662AAF3AE100002289 /* Assets.xcassets in Resources */,
 				B6838E4E2AB961BD00B972D7 /* car-film.mp4 in Resources */,
 				B6BAAA322AB972EF0012D8A8 /* UploadWidget.storyboard in Resources */,
+				B62824FA2B85EBF1006BA8AF /* UseCases.storyboard in Resources */,
+				B62825042B862D5F006BA8AF /* NormalizingProductAssets.storyboard in Resources */,
 				B621F0282B69198D00095019 /* RevealImage.storyboard in Resources */,
 				B6BD44CA2B453B8400DD6AA6 /* Video.storyboard in Resources */,
 				B665FECF2B3D73B000452FC6 /* InnerUploadFrame.xib in Resources */,
@@ -717,7 +768,9 @@
 				B63F36A82B3C1A5A00A82C49 /* Toolbar.swift in Sources */,
 				B621F01C2B69002A00095019 /* DeliveryTransformCollectionController.swift in Sources */,
 				B6BD44CD2B458A1900DD6AA6 /* AnimationHelper.swift in Sources */,
+				B62825072B863342006BA8AF /* NormalizingProductAssetsViewController.swift in Sources */,
 				B621F0242B69080100095019 /* SmartCroppingController.swift in Sources */,
+				B62825012B8618FD006BA8AF /* UseCaseCollectionCell.swift in Sources */,
 				B69FA1E62AB87016001D361F /* UploadViewController.swift in Sources */,
 				B6BD44D32B46D9C100DD6AA6 /* BaseViewController.swift in Sources */,
 				B61488932AB06CA800002289 /* TransformViewController.swift in Sources */,
@@ -727,6 +780,7 @@
 				B63AA90E2B6F9E33008B4FA8 /* VideoFeedContainerController.swift in Sources */,
 				B61488612AAF3AE000002289 /* MainViewController.swift in Sources */,
 				B697FB032B0F663D00E3C432 /* MainPageController.swift in Sources */,
+				B61AFA602B87204800991A57 /* ConditionalProductViewController.swift in Sources */,
 				B61A1DE72B70D5CA00C2C9D6 /* FirebaseEventsHandler.swift in Sources */,
 				B69FA1E02AB866A0001D361F /* FileUtils.swift in Sources */,
 				B63AA90C2B6F98B0008B4FA8 /* VideoSocialOverlaysController.swift in Sources */,
@@ -748,7 +802,9 @@
 				B6EEAD6C2B692FB1000A745E /* UploadChoiceController.swift in Sources */,
 				B63F369F2B3BFF0300A82C49 /* GradientView.swift in Sources */,
 				B621F01F2B69016E00095019 /* DeliveryUseCasesCollectionController.swift in Sources */,
+				B62824FC2B85EC11006BA8AF /* UseCasesViewController.swift in Sources */,
 				B69D671A2B6F842C00DA3C89 /* VideoFeedController.swift in Sources */,
+				B62824FE2B86175F006BA8AF /* UseCasesCollectionController.swift in Sources */,
 				B6EEAD952B6A7F63000A745E /* VideoFeedCollectionController.swift in Sources */,
 				B61A1DEB2B70D62E00C2C9D6 /* EventObject.swift in Sources */,
 				B69FA1E22AB86F4D001D361F /* Double+Extension.swift in Sources */,

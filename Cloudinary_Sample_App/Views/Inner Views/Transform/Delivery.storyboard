@@ -340,6 +340,7 @@
                         <outlet property="lbTitle" destination="0i7-Tt-HVG" id="yvf-8Y-l0N"/>
                         <outlet property="vwOptimization" destination="iJZ-7O-nTt" id="6b0-OK-Z0z"/>
                         <outlet property="vwTransform" destination="sdC-3c-nwB" id="doi-be-kXw"/>
+                        <outlet property="vwUseCases" destination="lof-5F-5nm" id="sQK-af-XJN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

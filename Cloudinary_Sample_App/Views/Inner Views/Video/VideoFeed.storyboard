@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akf-JS-pz8">
+                                <rect key="frame" x="16" y="75" width="28" height="28"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="tJm-6d-xl9">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="1hz-id-MhY"/>
+                                    <constraint firstItem="tJm-6d-xl9" firstAttribute="width" secondItem="akf-JS-pz8" secondAttribute="width" id="H7u-s5-OcI"/>
+                                    <constraint firstAttribute="width" secondItem="akf-JS-pz8" secondAttribute="height" multiplier="1:1" id="NqV-j9-fat"/>
+                                    <constraint firstItem="tJm-6d-xl9" firstAttribute="height" secondItem="akf-JS-pz8" secondAttribute="height" id="VmK-Vf-duD"/>
+                                    <constraint firstItem="tJm-6d-xl9" firstAttribute="centerY" secondItem="akf-JS-pz8" secondAttribute="centerY" id="awJ-UA-wMR"/>
+                                    <constraint firstItem="tJm-6d-xl9" firstAttribute="centerX" secondItem="akf-JS-pz8" secondAttribute="centerX" id="n4J-3u-3mc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDy-hf-UP7">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="765"/>
                                 <connections>
@@ -273,8 +297,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="akf-JS-pz8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Cm9-MJ-GFX"/>
                             <constraint firstItem="lDy-hf-UP7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-59" id="JF6-tu-JE9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lDy-hf-UP7" secondAttribute="trailing" id="KDf-w1-qtU"/>
+                            <constraint firstItem="akf-JS-pz8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KTg-If-Byt"/>
                             <constraint firstItem="XXM-84-0yJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TXx-om-eQW"/>
                             <constraint firstItem="XXM-84-0yJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="Z1R-g2-dzq"/>
                             <constraint firstItem="XXM-84-0yJ" firstAttribute="top" secondItem="lDy-hf-UP7" secondAttribute="bottom" id="bFz-T3-CIJ"/>
@@ -282,6 +308,9 @@
                             <constraint firstItem="XXM-84-0yJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="mnJ-HV-wxz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="vwBack" destination="akf-JS-pz8" id="0YJ-hP-lWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -370,10 +399,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back_arrow" width="12" height="12"/>
         <image name="tiktok_bar_icon" width="49" height="30"/>
         <image name="tiktok_discover" width="23" height="23"/>
         <image name="tiktok_home" width="26" height="23"/>
         <image name="tiktok_inbox" width="22" height="22"/>
+        <namedColor name="secondary">
+            <color red="0.24705882352941178" green="0.27843137254901962" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

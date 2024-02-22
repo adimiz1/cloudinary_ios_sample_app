@@ -12,8 +12,10 @@ import Cloudinary
 class TransformViewController: UIViewController {
 
     @IBOutlet weak var cvMain: UICollectionView!
-    
     @IBOutlet weak var vwContainer: UIView!
+
+    var currentController: UIViewController!
+
     var collectionController: TransformCollectionController!
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,36 +26,37 @@ class TransformViewController: UIViewController {
     }
 
     private func setContainerView(_ type: TransformContainerType) {
+        removeCurrentController()
         switch type {
         case .SmartCropping:
-            let currentController = UIStoryboard(name: "SmartCropping", bundle: nil).instantiateViewController(identifier: "SmartCroppingController")
+            currentController = UIStoryboard(name: "SmartCropping", bundle: nil).instantiateViewController(identifier: "SmartCroppingController")
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
         case .TextLayer:
-            let currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
+            currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController")
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation()
+            (currentController as! RevealImageController).setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation()
                 .setOverlay("text:Arial_72:NEW%2520COLLECTION").setColor("white").chain()
                 .setFlags("layer_apply").setGravity("center")).generate("Demo%20app%20content/layers-fashion-2_1_xsfbvm"))
         case .BackgroundRemoval:
-            let currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
+            currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/bgr-furniture-1_isnptj"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("background_removal")).generate("Demo%20app%20content/bgr-furniture-1_isnptj"))
+            (currentController as! RevealImageController).setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/bgr-furniture-1_isnptj"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("background_removal")).generate("Demo%20app%20content/bgr-furniture-1_isnptj"))
         case .ReColor:
-            let currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
+            currentController = UIStoryboard(name: "RevealImage", bundle: nil).instantiateViewController(identifier: "RevealImageController") as! RevealImageController
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
             currentController.didMove(toParent: self)
-            currentController.setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/recolor-tshirt-5_omapls"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("gen_recolor:prompt_t-shirt;to-color_8fbc8f")).generate("Demo%20app%20content/recolor-tshirt-5_omapls"))
+            (currentController as! RevealImageController).setMainImageView(rightImage: CloudinaryHelper.shared.cloudinary.createUrl().generate("Demo%20app%20content/recolor-tshirt-5_omapls"), leftImage: CloudinaryHelper.shared.cloudinary.createUrl().setTransformation(CLDTransformation().setEffect("gen_recolor:prompt_t-shirt;to-color_8fbc8f")).generate("Demo%20app%20content/recolor-tshirt-5_omapls"))
         }
     }
 
@@ -71,6 +74,12 @@ class TransformViewController: UIViewController {
             flow.itemSize = CGSize(width: floor(width/itemsInOneLine), height: width/itemsInOneLine)
             flow.minimumInteritemSpacing = 10
             flow.minimumLineSpacing = itemSpacing
+    }
+
+    private func removeCurrentController() {
+        currentController?.willMove(toParent: nil)
+        currentController?.view.removeFromSuperview()
+        currentController?.removeFromParent()
     }
 }
 extension TransformViewController: TransformCollectionDelegate {

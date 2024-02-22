@@ -49,6 +49,9 @@ class BaseViewController: UIViewController {
         case .ImageWidget:
             lbTitle.text = "Image Widget"
             break
+        case .UseCases:
+            lbTitle.text = "Use Cases"
+            break
         case .none:
             break
         }
@@ -65,6 +68,12 @@ class BaseViewController: UIViewController {
             currentController.didMove(toParent: self)
         case .Transform:
             let currentController = UIStoryboard(name: "Transform", bundle: nil).instantiateViewController(identifier: "TransformViewController")
+            currentController.view.frame = vwContainer.bounds
+            addChild(currentController)
+            vwContainer.addSubview(currentController.view)
+            currentController.didMove(toParent: self)
+        case .UseCases:
+            let currentController = UIStoryboard(name: "UseCases", bundle: nil).instantiateViewController(identifier: "UseCasesViewController")
             currentController.view.frame = vwContainer.bounds
             addChild(currentController)
             vwContainer.addSubview(currentController.view)
@@ -122,6 +131,7 @@ enum BaseControllerType {
     case FetchUpload
     case UploadWidget
     case ImageWidget
+    case UseCases
 }
 public enum UploadViewType {
     case Upload
