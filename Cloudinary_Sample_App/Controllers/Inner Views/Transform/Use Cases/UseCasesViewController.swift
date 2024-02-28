@@ -76,8 +76,20 @@ class UseCasesViewController: UIViewController {
             collectionController.selectedCellIndex = 1
             break
         case .AdaptVideo:
+            currentController = UIStoryboard(name: "IntegrateAI", bundle: nil).instantiateViewController(identifier: "IntegrateAIViewController")
+            (currentController as! IntegrateAIViewController).videoPublicId = "DevApp_Adapt_Video_02_diett8"
+            currentController.view.frame = vwContainer.bounds
+            addChild(currentController)
+            vwContainer.addSubview(currentController.view)
+            currentController.didMove(toParent: self)
             collectionController.selectedCellIndex = 2
         case .IntegrateAI:
+            currentController = UIStoryboard(name: "IntegrateAI", bundle: nil).instantiateViewController(identifier: "IntegrateAIViewController")
+            (currentController as! IntegrateAIViewController).videoPublicId = "DevApp_Generative_Fill_01_fneqxw"
+            currentController.view.frame = vwContainer.bounds
+            addChild(currentController)
+            vwContainer.addSubview(currentController.view)
+            currentController.didMove(toParent: self)
             collectionController.selectedCellIndex = 3
         }
     }
@@ -96,9 +108,9 @@ extension UseCasesViewController: UseCasesCollectionDelegate {
         case 1:
             setContainerView(.ConditionalProduct)
         case 2:
-            break
+            setContainerView(.AdaptVideo)
         case 3:
-            break
+            setContainerView(.IntegrateAI)
         default:
             break
         }

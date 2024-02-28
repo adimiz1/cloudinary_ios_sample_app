@@ -27,6 +27,8 @@
 		B61A1DE92B70D5F900C2C9D6 /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A1DE82B70D5F900C2C9D6 /* EventsProvider.swift */; };
 		B61A1DEB2B70D62E00C2C9D6 /* EventObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A1DEA2B70D62E00C2C9D6 /* EventObject.swift */; };
 		B61AFA602B87204800991A57 /* ConditionalProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61AFA5F2B87204800991A57 /* ConditionalProductViewController.swift */; };
+		B61EFF732B8F6751006F267C /* IntegrateAI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61EFF722B8F6751006F267C /* IntegrateAI.storyboard */; };
+		B61EFF752B8F6784006F267C /* IntegrateAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61EFF742B8F6784006F267C /* IntegrateAIViewController.swift */; };
 		B621F01C2B69002A00095019 /* DeliveryTransformCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */; };
 		B621F01F2B69016E00095019 /* DeliveryUseCasesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */; };
 		B621F0212B6901A300095019 /* UseCaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621F0202B6901A300095019 /* UseCaseCell.swift */; };
@@ -117,6 +119,8 @@
 		B61A1DE82B70D5F900C2C9D6 /* EventsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProvider.swift; sourceTree = "<group>"; };
 		B61A1DEA2B70D62E00C2C9D6 /* EventObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObject.swift; sourceTree = "<group>"; };
 		B61AFA5F2B87204800991A57 /* ConditionalProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalProductViewController.swift; sourceTree = "<group>"; };
+		B61EFF722B8F6751006F267C /* IntegrateAI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntegrateAI.storyboard; sourceTree = "<group>"; };
+		B61EFF742B8F6784006F267C /* IntegrateAIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrateAIViewController.swift; sourceTree = "<group>"; };
 		B621F01B2B69002A00095019 /* DeliveryTransformCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTransformCollectionController.swift; sourceTree = "<group>"; };
 		B621F01E2B69016E00095019 /* DeliveryUseCasesCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryUseCasesCollectionController.swift; sourceTree = "<group>"; };
 		B621F0202B6901A300095019 /* UseCaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCell.swift; sourceTree = "<group>"; };
@@ -350,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				B62825032B862D5F006BA8AF /* NormalizingProductAssets.storyboard */,
+				B61EFF722B8F6751006F267C /* IntegrateAI.storyboard */,
 				B62825082B863563006BA8AF /* ConditionalProduct.storyboard */,
 			);
 			path = "Use Cases";
@@ -358,6 +363,7 @@
 		B62825052B86332A006BA8AF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B61EFF742B8F6784006F267C /* IntegrateAIViewController.swift */,
 				B62825062B863342006BA8AF /* NormalizingProductAssetsViewController.swift */,
 				B61AFA5F2B87204800991A57 /* ConditionalProductViewController.swift */,
 			);
@@ -697,6 +703,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B61488912AB06C9500002289 /* Transform.storyboard in Resources */,
+				B61EFF732B8F6751006F267C /* IntegrateAI.storyboard in Resources */,
 				B61488692AAF3AE100002289 /* LaunchScreen.storyboard in Resources */,
 				B665FED52B3D776300452FC6 /* Widgets.storyboard in Resources */,
 				B697FB052B0F663D00E3C432 /* video_links.plist in Resources */,
@@ -796,6 +803,7 @@
 				B621F0212B6901A300095019 /* UseCaseCell.swift in Sources */,
 				B6BD44D72B4BD1A100DD6AA6 /* TransformCollectionCell.swift in Sources */,
 				B6BAAA342AB9730D0012D8A8 /* UploadWidgetViewController.swift in Sources */,
+				B61EFF752B8F6784006F267C /* IntegrateAIViewController.swift in Sources */,
 				B621F02B2B6919D600095019 /* RevealImageController.swift in Sources */,
 				B640F8252B624E4800173CB9 /* WidgetsViewController.swift in Sources */,
 				B61488992AB07B6500002289 /* CloudinaryHelper.swift in Sources */,
