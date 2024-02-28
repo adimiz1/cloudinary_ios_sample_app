@@ -57,7 +57,6 @@ class OptimizationViewController: UIViewController {
 
             url = cloudinary.createUrl().setType("fetch").generate(publicId)
         }
-        let view = UIView()
         
         ivOriginal.cldSetImage(url!, cloudinary: cloudinary)
 
@@ -68,10 +67,10 @@ class OptimizationViewController: UIViewController {
     }
 
     func setOptimizedImageView() {
-        var url = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.4).setCrop("scale")).generate(publicId)
+        var url = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.8).setCrop("scale")).generate(publicId)
         if type == .FetchUpload {
 
-            url = cloudinary.createUrl().setType("fetch").setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("auto").setDpr("auto").setWidth(0.7).setCrop("scale")).generate(publicId)
+            url = cloudinary.createUrl().setType("fetch").setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.8).setCrop("scale")).generate(publicId)
         }
         ivOptimized.cldSetImage(url!, cloudinary: cloudinary)
 
@@ -94,9 +93,9 @@ class OptimizationViewController: UIViewController {
             self.lbOriginalDimensions.isHidden = false
             self.lbOriginalSize.isHidden = false
         }
-        var optimizedUrl = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("auto").setDpr("auto").setWidth(0.4).setCrop("scale")).generate(publicId)!
+        var optimizedUrl = cloudinary.createUrl().setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.8).setCrop("scale")).generate(publicId)!
         if type == .FetchUpload {
-            optimizedUrl = cloudinary.createUrl().setType("fetch").setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("auto").setDpr("auto").setWidth(0.7).setCrop("scale")).generate(publicId)!
+            optimizedUrl = cloudinary.createUrl().setType("fetch").setTransformation(CLDTransformation().setQuality("auto").setFetchFormat("heic").setDpr("auto").setWidth(0.8).setCrop("scale")).generate(publicId)!
         }
         FileUtils.getImageInfo(URL(string: optimizedUrl)!) { format, size, dimensions in
             self.lbOptimizedFormat.text = "\(format.uppercased()) ⏺"
