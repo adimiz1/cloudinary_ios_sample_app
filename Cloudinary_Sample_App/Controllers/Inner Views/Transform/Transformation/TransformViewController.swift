@@ -117,8 +117,6 @@ extension TransformViewController: TransformCollectionDelegate {
         default:
             break
         }
-
-        cvMain.reloadData()
     }
 }
 

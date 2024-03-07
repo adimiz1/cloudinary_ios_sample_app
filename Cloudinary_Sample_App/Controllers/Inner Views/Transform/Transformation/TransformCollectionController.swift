@@ -25,7 +25,7 @@ class TransformCollectionController: NSObject, UICollectionViewDelegate, UIColle
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        4
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -36,8 +36,17 @@ class TransformCollectionController: NSObject, UICollectionViewDelegate, UIColle
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let previousSelectedIndexPath = selectedCellIndex
         selectedCellIndex = indexPath.row
         delegate.cellSelected(indexPath.row)
+        updateSelectedCellAppearance(collectionView, indexPath)
+        updateSelectedCellAppearance(collectionView, IndexPath(row: previousSelectedIndexPath, section: 0))
+    }
+
+    func updateSelectedCellAppearance(_ collectionView: UICollectionView, _ indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? TransformCollectionCell {
+            setSelectedCell(cell, index: indexPath.row)
+        }
     }
 
     func setSelectedCell(_ cell: TransformCollectionCell, index: Int) {
