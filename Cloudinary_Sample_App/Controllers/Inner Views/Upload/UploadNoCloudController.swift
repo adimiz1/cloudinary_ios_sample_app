@@ -19,6 +19,7 @@ class UploadNoCloudController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextField()
         setGetStratedView()
         setCantFindCloudView()
         setCloseView()
@@ -27,6 +28,10 @@ class UploadNoCloudController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         EventsHandler.shared.logEvent(event: EventObject(name: "Upload No Cloud"))
+    }
+
+    private func setTextField() {
+        tfCloudName.delegate = self
     }
 
     private func setGetStratedView() {
@@ -64,5 +69,13 @@ class UploadNoCloudController: UIViewController {
             self.delegate.dismissController()
         }
 
+    }
+}
+
+extension UploadNoCloudController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        getStratedTap()
+        tfCloudName.resignFirstResponder()
+        return false
     }
 }
