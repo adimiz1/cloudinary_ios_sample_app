@@ -10,10 +10,12 @@ import UIKit
 import Cloudinary
 
 class UploadDoesNotExistController: UIViewController {
+    @IBOutlet weak var vwUploadContainer: UIView!
     @IBOutlet weak var vwUpload: UIView!
-
+    @IBOutlet weak var aiLoading: UIActivityIndicatorView!
+    @IBOutlet weak var lbUploadButton: UILabel!
+    
     private var imagePicker: UIImagePickerController!
-
     weak var delegate: UploadChoiceControllerDelegate!
 
     var type: UploadViewType = .Upload
@@ -24,10 +26,16 @@ class UploadDoesNotExistController: UIViewController {
         super.viewWillAppear(animated)
         setUploadImageView()
         if type == .UploadLarge {
+            lbUploadButton.text = "Upload Video"
             EventsHandler.shared.logEvent(event: EventObject(name: "Upload Large"))
         } else {
             EventsHandler.shared.logEvent(event: EventObject(name: "Upload"))
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setUploadImageView()
     }
 
     func setUploadImageView() {
@@ -53,10 +61,13 @@ class UploadDoesNotExistController: UIViewController {
     }
 
     func uploadImage(_ image: UIImage) {
+        vwUploadContainer.isHidden = true
+        aiLoading.isHidden = false
         let data = image.pngData()
         cloudinary.createUploader().upload(data: data!, uploadPreset: "ios_sample", completionHandler:  { response, error in
             DispatchQueue.main.async {
                 self.delegate.switchToController(.UploadExist, url: response?.secureUrl)
+                self.aiLoading.isHidden = true
             }
         })
     }

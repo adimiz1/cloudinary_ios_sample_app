@@ -16,7 +16,8 @@ class SingleUploadViewController: UIViewController {
     @IBOutlet weak var vwImage: UIView!
     @IBOutlet weak var ivMain: UIImageView!
     @IBOutlet weak var vwOpenGallery: UIView!
-
+    @IBOutlet weak var lbButton: UILabel!
+    
     weak var delegate: UploadChoiceControllerDelegate!
 
     var url: String?
@@ -49,6 +50,7 @@ class SingleUploadViewController: UIViewController {
             ivMain.cldSetImage(url , cloudinary: self.cloudinary)
         }
         if type == .UploadLarge {
+            lbButton.text = "Upload Video"
             ivMain.isHidden = true
             let player = CLDVideoPlayer(url: url)
                 let playerController = AVPlayerViewController()
