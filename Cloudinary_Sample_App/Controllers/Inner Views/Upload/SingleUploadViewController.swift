@@ -22,7 +22,7 @@ class SingleUploadViewController: UIViewController {
 
     var url: String?
 
-    var cloudinary = CloudinaryHelper.shared.cloudinary
+    var cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
 
     var uploadLoadingView: UploadLoadingView?
 

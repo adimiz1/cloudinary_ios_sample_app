@@ -14,8 +14,10 @@ class UploadWidgetViewController: UIViewController {
     @IBOutlet weak var ivMain: CLDUIImageView!
     @IBOutlet weak var vwOpenGallery: UIView!
     
-    var cloudinary = CloudinaryHelper.shared.cloudinary
+    var cloudinary: CLDCloudinary!
     var uploadWidget: CLDUploaderWidget!
+
+    var noCloudController: UIViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,11 @@ class UploadWidgetViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if CloudinaryHelper.shared.getUploadCloud() == nil {
+            openNoCloudController()
+        } else {
+            cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
+        }
         EventsHandler.shared.logEvent(event: EventObject(name: "Upload Widget"))
     }
 
@@ -49,6 +56,13 @@ class UploadWidgetViewController: UIViewController {
     @objc func stepBack() {
         self.dismiss(animated: true)
     }
+
+    private func openNoCloudController() {
+        noCloudController = UIStoryboard(name: "UploadNoCloud", bundle: nil).instantiateViewController(identifier: "UploadNoCloudController")
+        (noCloudController as! UploadNoCloudController).delegate = self
+//            currentController.modalPresentationStyle = .fullScreen
+        self.present(noCloudController, animated: true)
+    }
 }
 
 extension UploadWidgetViewController: CLDUploaderWidgetDelegate {
@@ -61,4 +75,19 @@ extension UploadWidgetViewController: CLDUploaderWidgetDelegate {
     }
     func uploadWidgetDidDismiss() {
     }
+}
+
+extension UploadWidgetViewController: UploadChoiceControllerDelegate {
+    func switchToController(_ uploadState: UploadChoiceState, url: String?) {
+        cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
+        if noCloudController != nil {
+            noCloudController.dismiss(animated: true)
+        }
+    }
+    
+    func dismissController() {
+        self.dismiss(animated: true)
+    }
+    
+
 }
