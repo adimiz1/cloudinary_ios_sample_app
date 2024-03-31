@@ -10,6 +10,7 @@ import UIKit
 
 protocol UploadChoiceControllerDelegate: AnyObject {
     func switchToController(_ uploadState: UploadChoiceState, url: String?)
+    func dismissController()
 }
 
 class UploadChoiceController: UIViewController {
@@ -22,11 +23,11 @@ class UploadChoiceController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if CloudinaryHelper.shared.getUploadCloud() == nil {
-            setContainerView(.NoCloudName)
-        } else {
-            setContainerView(.NoUpload)
-        }
+            if CloudinaryHelper.shared.getUploadCloud() == nil {
+                setContainerView(.NoCloudName)
+            } else {
+                setContainerView(.NoUpload)
+            }
     }
 
     private func setContainerView(_ uploadState: UploadChoiceState, url: String? = nil) {
@@ -35,7 +36,7 @@ class UploadChoiceController: UIViewController {
         case .NoCloudName:
             currentController = UIStoryboard(name: "UploadNoCloud", bundle: nil).instantiateViewController(identifier: "UploadNoCloudController")
             (currentController as! UploadNoCloudController).delegate = self
-            currentController.modalPresentationStyle = .fullScreen
+//            currentController.modalPresentationStyle = .fullScreen
             self.present(currentController, animated: true)
             break
         case .NoUpload:
@@ -68,6 +69,10 @@ class UploadChoiceController: UIViewController {
 extension UploadChoiceController: UploadChoiceControllerDelegate {
     func switchToController(_ uploadState: UploadChoiceState, url: String?) {
         setContainerView(uploadState, url: url)
+    }
+
+    func dismissController() {
+        self.dismiss(animated: true)
     }
 }
 
