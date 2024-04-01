@@ -51,6 +51,8 @@
 		B63AA9102B6FA2D0008B4FA8 /* UploadNoCloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */; };
 		B63AA9122B6FB664008B4FA8 /* UploadNoCloudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */; };
 		B63AA9142B70D02C008B4FA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B63AA9132B70D02C008B4FA8 /* GoogleService-Info.plist */; };
+		B63CB3632BBAABD0001255BF /* UploadWidget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63CB3622BBAABD0001255BF /* UploadWidget.storyboard */; };
+		B63CB3652BBAAC40001255BF /* UploadWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CB3642BBAAC40001255BF /* UploadWidgetViewController.swift */; };
 		B63F369F2B3BFF0300A82C49 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F369E2B3BFF0300A82C49 /* GradientView.swift */; };
 		B63F36A12B3C000A00A82C49 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63F36A02B3C000A00A82C49 /* Splash.storyboard */; };
 		B63F36A32B3C02C800A82C49 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F36A22B3C02C800A82C49 /* SplashViewController.swift */; };
@@ -83,8 +85,6 @@
 		B69FA1E02AB866A0001D361F /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FA1DF2AB866A0001D361F /* FileUtils.swift */; };
 		B69FA1E22AB86F4D001D361F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FA1E12AB86F4D001D361F /* Double+Extension.swift */; };
 		B69FA1E62AB87016001D361F /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FA1E52AB87016001D361F /* UploadViewController.swift */; };
-		B6BAAA322AB972EF0012D8A8 /* UploadWidget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BAAA312AB972EF0012D8A8 /* UploadWidget.storyboard */; };
-		B6BAAA342AB9730D0012D8A8 /* UploadWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */; };
 		B6BAAA362AB9772D0012D8A8 /* ImageWidget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */; };
 		B6BAAA382AB977410012D8A8 /* ImageWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */; };
 		B6BD44CA2B453B8400DD6AA6 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD44C92B453B8400DD6AA6 /* Video.storyboard */; };
@@ -143,6 +143,8 @@
 		B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadNoCloud.storyboard; sourceTree = "<group>"; };
 		B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadNoCloudController.swift; sourceTree = "<group>"; };
 		B63AA9132B70D02C008B4FA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B63CB3622BBAABD0001255BF /* UploadWidget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UploadWidget.storyboard; sourceTree = "<group>"; };
+		B63CB3642BBAAC40001255BF /* UploadWidgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadWidgetViewController.swift; sourceTree = "<group>"; };
 		B63F369E2B3BFF0300A82C49 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B63F36A02B3C000A00A82C49 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		B63F36A22B3C02C800A82C49 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -175,8 +177,6 @@
 		B69FA1DF2AB866A0001D361F /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		B69FA1E12AB86F4D001D361F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		B69FA1E52AB87016001D361F /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		B6BAAA312AB972EF0012D8A8 /* UploadWidget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadWidget.storyboard; sourceTree = "<group>"; };
-		B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadWidgetViewController.swift; sourceTree = "<group>"; };
 		B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageWidget.storyboard; sourceTree = "<group>"; };
 		B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWidgetViewController.swift; sourceTree = "<group>"; };
 		B6BD44C92B453B8400DD6AA6 /* Video.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 		B640F8232B624E3D00173CB9 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				B6BAAA332AB9730D0012D8A8 /* UploadWidgetViewController.swift */,
+				B63CB3642BBAAC40001255BF /* UploadWidgetViewController.swift */,
 				B6BAAA372AB977410012D8A8 /* ImageWidgetViewController.swift */,
 				B640F8242B624E4800173CB9 /* WidgetsViewController.swift */,
 			);
@@ -604,7 +604,7 @@
 		B6EEAD9A2B6BB312000A745E /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				B6BAAA312AB972EF0012D8A8 /* UploadWidget.storyboard */,
+				B63CB3622BBAABD0001255BF /* UploadWidget.storyboard */,
 				B6BAAA352AB9772D0012D8A8 /* ImageWidget.storyboard */,
 				B665FED42B3D776300452FC6 /* Widgets.storyboard */,
 			);
@@ -721,10 +721,10 @@
 				B6EEAD6A2B692F9A000A745E /* UploadChoice.storyboard in Resources */,
 				B61488662AAF3AE100002289 /* Assets.xcassets in Resources */,
 				B6838E4E2AB961BD00B972D7 /* car-film.mp4 in Resources */,
-				B6BAAA322AB972EF0012D8A8 /* UploadWidget.storyboard in Resources */,
 				B62824FA2B85EBF1006BA8AF /* UseCases.storyboard in Resources */,
 				B62825042B862D5F006BA8AF /* NormalizingProductAssets.storyboard in Resources */,
 				B621F0282B69198D00095019 /* RevealImage.storyboard in Resources */,
+				B63CB3632BBAABD0001255BF /* UploadWidget.storyboard in Resources */,
 				B6BD44CA2B453B8400DD6AA6 /* Video.storyboard in Resources */,
 				B665FECF2B3D73B000452FC6 /* InnerUploadFrame.xib in Resources */,
 				B697FB082B0F665A00E3C432 /* VideoFeed.storyboard in Resources */,
@@ -802,7 +802,6 @@
 				B6BD44D92B4BD22E00DD6AA6 /* TransformCollectionController.swift in Sources */,
 				B621F0212B6901A300095019 /* UseCaseCell.swift in Sources */,
 				B6BD44D72B4BD1A100DD6AA6 /* TransformCollectionCell.swift in Sources */,
-				B6BAAA342AB9730D0012D8A8 /* UploadWidgetViewController.swift in Sources */,
 				B61EFF752B8F6784006F267C /* IntegrateAIViewController.swift in Sources */,
 				B621F02B2B6919D600095019 /* RevealImageController.swift in Sources */,
 				B640F8252B624E4800173CB9 /* WidgetsViewController.swift in Sources */,
@@ -824,6 +823,7 @@
 				B69FA1DB2AB8631A001D361F /* OptimizationViewController.swift in Sources */,
 				B6EEAD972B6A7F81000A745E /* VideoFeedCell.swift in Sources */,
 				B64036F02B4FF1590018A023 /* SingleUploadViewController.swift in Sources */,
+				B63CB3652BBAAC40001255BF /* UploadWidgetViewController.swift in Sources */,
 				B61A1DE92B70D5F900C2C9D6 /* EventsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -982,6 +982,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1010,6 +1011,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

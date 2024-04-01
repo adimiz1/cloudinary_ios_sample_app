@@ -10,7 +10,9 @@ import UIKit
 import Cloudinary
 
 class UploadWidgetViewController: UIViewController {
-    
+
+    @IBOutlet weak var vwUploadContainer: UIView!
+    @IBOutlet weak var aiLoading: UIActivityIndicatorView!
     @IBOutlet weak var ivMain: CLDUIImageView!
     @IBOutlet weak var vwOpenGallery: UIView!
     
@@ -57,6 +59,16 @@ class UploadWidgetViewController: UIViewController {
         self.dismiss(animated: true)
     }
 
+    private func showUploadingView() {
+        vwUploadContainer.isHidden = true
+        aiLoading.isHidden = false
+
+    }
+
+    private func hideUploadingView() {
+        self.aiLoading.isHidden = true
+    }
+
     private func openNoCloudController() {
         noCloudController = UIStoryboard(name: "UploadNoCloud", bundle: nil).instantiateViewController(identifier: "UploadNoCloudController")
         (noCloudController as! UploadNoCloudController).delegate = self
@@ -68,17 +80,20 @@ class UploadWidgetViewController: UIViewController {
 extension UploadWidgetViewController: CLDUploaderWidgetDelegate {
     func uploadWidget(_ widget: CLDUploaderWidget, willCall uploadRequests: [CLDUploadRequest]) {
       uploadRequests[0].response( { response, error in
+          self.hideUploadingView()
           self.ivMain.cldSetImage(response!.secureUrl!, cloudinary: self.cloudinary)
       } )
     }
     func widgetDidCancel(_ widget: CLDUploaderWidget) {
     }
     func uploadWidgetDidDismiss() {
+        showUploadingView()
     }
 }
 
 extension UploadWidgetViewController: UploadChoiceControllerDelegate {
     func switchToController(_ uploadState: UploadChoiceState, url: String?) {
+        showUploadingView()
         cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
         if noCloudController != nil {
             noCloudController.dismiss(animated: true)
@@ -86,8 +101,5 @@ extension UploadWidgetViewController: UploadChoiceControllerDelegate {
     }
     
     func dismissController() {
-        self.dismiss(animated: true)
     }
-    
-
 }
