@@ -92,6 +92,12 @@
                                                                     <constraint firstAttribute="width" secondItem="NFf-sM-tvJ" secondAttribute="height" multiplier="75:22" id="Tla-PI-bs0"/>
                                                                     <constraint firstItem="5RE-Iq-oLk" firstAttribute="centerY" secondItem="NFf-sM-tvJ" secondAttribute="centerY" id="cJO-Tu-MDS"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

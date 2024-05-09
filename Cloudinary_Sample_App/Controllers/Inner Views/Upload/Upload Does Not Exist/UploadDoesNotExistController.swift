@@ -37,11 +37,12 @@ class UploadDoesNotExistController: UIViewController {
         case .UploadWidget:
             EventsHandler.shared.logEvent(event: EventObject(name: "Upload Widget"))
         }
+        setUploadImageView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setUploadImageView()
+
     }
 
     func setUploadImageView() {
