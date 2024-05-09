@@ -1,57 +1,54 @@
-//
-//  TransformCollectionController.swift
-//  Cloudinary_Sample_App
-//
-//  Created by Adi Mizrahi on 08/01/2024.
-//
-
 import Foundation
 import UIKit
 import Cloudinary
 
-protocol TransformCollectionDelegate {
+protocol TransformCollectionDelegate: AnyObject {
     func cellSelected(_ index: Int)
 }
 
 class TransformCollectionController: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    var delegate: TransformCollectionDelegate
+    weak var delegate: TransformCollectionDelegate?
+    var selectedCellIndex: Int?
+    var previousSelectedCell: TransformCollectionCell?
 
-    var selectedCellIndex = 0
-
-    init(_ delegate: TransformCollectionDelegate) {
+    init(delegate: TransformCollectionDelegate) {
         self.delegate = delegate
+        super.init()
     }
 
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        return 4
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransformCollectionCell", for: indexPath) as! TransformCollectionCell
         cell.setCellBy(index: indexPath.row)
         setSelectedCell(cell, index: indexPath.row)
+
+        // Initialize previousSelectedCell for the first cell
+        if indexPath.row == 0 && previousSelectedCell == nil {
+            previousSelectedCell = cell
+        }
+
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let previousSelectedIndexPath = selectedCellIndex
-        selectedCellIndex = indexPath.row
-        delegate.cellSelected(indexPath.row)
-        updateSelectedCellAppearance(collectionView, indexPath)
-        updateSelectedCellAppearance(collectionView, IndexPath(row: previousSelectedIndexPath, section: 0))
-    }
-
-    func updateSelectedCellAppearance(_ collectionView: UICollectionView, _ indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? TransformCollectionCell {
-            setSelectedCell(cell, index: indexPath.row)
+        if let previousSelectedCell = previousSelectedCell {
+            setSelectedCell(previousSelectedCell, index: -1) // Deselect previous cell
         }
+        if let selectedCell = collectionView.cellForItem(at: indexPath) as? TransformCollectionCell {
+            selectedCellIndex = indexPath.row
+            setSelectedCell(selectedCell, index: indexPath.row) // Select new cell
+            previousSelectedCell = selectedCell
+        }
+        selectedCellIndex = indexPath.row
+        delegate?.cellSelected(indexPath.row)
     }
 
     func setSelectedCell(_ cell: TransformCollectionCell, index: Int) {
         if index == selectedCellIndex {
-            cell.isSelected = true
             cell.layer.borderColor = UIColor(named: "primary")?.cgColor
             cell.layer.borderWidth = 3
             cell.layer.cornerRadius = 4
