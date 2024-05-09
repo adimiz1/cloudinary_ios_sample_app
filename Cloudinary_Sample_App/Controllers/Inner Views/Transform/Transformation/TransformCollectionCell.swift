@@ -20,13 +20,13 @@ class TransformCollectionCell: UICollectionViewCell {
             lbMain.text = "Smart Cropping"
         case 1:
             ivMain.cldSetImage(publicId: "Demo%20app%20content/layers-fashion-2_1_xsfbvm", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
-            lbMain.text = "Localization & branding"
+            lbMain.text = "Overlay"
         case 2:
             ivMain.cldSetImage(publicId: "Demo%20app%20content/bgr-furniture-1_isnptj", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
-            lbMain.text = "Background normalizing"
+            lbMain.text = "Background Normalization"
         case 3:
             ivMain.cldSetImage(publicId: "Demo%20app%20content/recolor-tshirt-5_omapls", cloudinary: CloudinaryHelper.shared.cloudinary, transformation: CLDTransformation().setCrop("thumb"))
-            lbMain.text = "Color Alternation"
+            lbMain.text = "Generative Recolor"
         default:
             break
         }

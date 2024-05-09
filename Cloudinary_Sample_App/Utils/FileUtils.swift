@@ -13,7 +13,7 @@ class FileUtils {
             return ""
         }
         let imageSize: Int = imgData.count
-        let size = Double(imageSize) / 1024.0 / 1024.0
+        let size = Double(imageSize) / 1024.0
         return "\(size.rounded(toPlaces: 2))"
     }
 
@@ -31,7 +31,7 @@ class FileUtils {
                 let format = ImageFormat.get(from: data).rawValue
 
                 let imageSize: Int = data.count
-                let size = Double(imageSize) / 1024.0 / 1024.0
+                let size = Double(imageSize) / 1024.0
 
                 let image = UIImage(data: data)
                 let dimensions = image.map { ($0.size.width, $0.size.height) }

@@ -1,6 +1,6 @@
 //
 //  UploadWidgetViewController.swift
-//  iOS_Geekle_Conference
+//  Cloudinary_Sample_App
 //
 //  Created by Adi Mizrahi on 19/09/2023.
 //

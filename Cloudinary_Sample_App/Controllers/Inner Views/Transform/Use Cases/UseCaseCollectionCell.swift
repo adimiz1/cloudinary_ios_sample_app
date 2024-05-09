@@ -14,13 +14,13 @@ class UseCaseCollectionCell: UICollectionViewCell {
     func setCellBy(index: Int) {
         switch index {
         case 0:
-            lbMain.text = "Normalizing Product Assets - Sizing"
+            lbMain.text = "Normalize Asset Sizing"
         case 1:
             lbMain.text = "Conditional Product Badging"
         case 2:
-            lbMain.text = "Adapt video to any screen"
+            lbMain.text = "Adapt to Screen Size"
         case 3:
-            lbMain.text = "Integrate AI-generated backgrounds"
+            lbMain.text = "AI Generated Backgrounds"
         default:
             break
         }

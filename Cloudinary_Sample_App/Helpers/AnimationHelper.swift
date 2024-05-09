@@ -62,6 +62,9 @@ class AnimationHelper {
         if let _ = newController as? DeliveryViewController {
             return .rightToLeft;
         }
+        if let _ = newController as? WidgetsViewController, let _ = currentController as? VideoViewController{
+            return .rightToLeft
+        }
         if let _ = newController as? UploadViewController {
             if let _ = currentController as? DeliveryViewController {
                 return .leftToRight

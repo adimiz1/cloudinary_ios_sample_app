@@ -19,13 +19,13 @@ class TransformationCell: UICollectionViewCell {
             lbMain.text = "Smart Cropping"
         case 1:
             ivMain.image = UIImage(named: "localization_branding")
-            lbMain.text = "Localization & Branding"
+            lbMain.text = "Overlay"
         case 2:
             ivMain.image = UIImage(named: "background_normalizing")
-            lbMain.text = "Background normalizing"
+            lbMain.text = "Background Normalization"
         case 3:
             ivMain.image = UIImage(named: "color_alternation")
-            lbMain.text = "Color alternation"
+            lbMain.text = "Generative Recolor"
         default:
             break
         }

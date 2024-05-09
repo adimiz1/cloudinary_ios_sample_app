@@ -87,7 +87,7 @@ class OptimizationViewController: UIViewController {
         FileUtils.getImageInfo(URL(string: originalUrl)!) { format,size, dimensions  in
             self.lbOriginalFormat.text = "\(format.uppercased()) ⏺"
             self.lbOriginalDimensions.text = "\(Int(dimensions.width))x\(Int(dimensions.height)) ⏺"
-            self.lbOriginalSize.text = "\(size)MB"
+            self.lbOriginalSize.text = "\(size)KB"
 
             self.lbOriginalFormat.isHidden = false
             self.lbOriginalDimensions.isHidden = false
@@ -100,7 +100,7 @@ class OptimizationViewController: UIViewController {
         FileUtils.getImageInfo(URL(string: optimizedUrl)!) { format, size, dimensions in
             self.lbOptimizedFormat.text = "\(format.uppercased()) ⏺"
             self.lbOptimizedDimensions.text = "\(Int(dimensions.width))x\(Int(dimensions.height)) ⏺"
-            self.lbOptimizedSize.text = "\(size)MB"
+            self.lbOptimizedSize.text = "\(size)KB"
 
             self.lbOptimizedFormat.isHidden = false
             self.lbOptimizedDimensions.isHidden = false
