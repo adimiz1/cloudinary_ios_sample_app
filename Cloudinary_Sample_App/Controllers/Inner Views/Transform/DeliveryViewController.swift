@@ -24,6 +24,7 @@ class DeliveryViewController: UIViewController {
         setOptimizationView()
         setTransformationCollectionView()
         setUseCasesCollectionView()
+        EventsHandler.shared.logEvent(event: EventObject(name: "Delivery"))
     }
 
     private func setOptimizationView() {

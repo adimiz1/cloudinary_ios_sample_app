@@ -50,7 +50,6 @@
 		B63AA90E2B6F9E33008B4FA8 /* VideoFeedContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA90D2B6F9E33008B4FA8 /* VideoFeedContainerController.swift */; };
 		B63AA9102B6FA2D0008B4FA8 /* UploadNoCloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */; };
 		B63AA9122B6FB664008B4FA8 /* UploadNoCloudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */; };
-		B63AA9142B70D02C008B4FA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B63AA9132B70D02C008B4FA8 /* GoogleService-Info.plist */; };
 		B63CB3632BBAABD0001255BF /* UploadWidget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B63CB3622BBAABD0001255BF /* UploadWidget.storyboard */; };
 		B63CB3652BBAAC40001255BF /* UploadWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63CB3642BBAAC40001255BF /* UploadWidgetViewController.swift */; };
 		B63F369F2B3BFF0300A82C49 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63F369E2B3BFF0300A82C49 /* GradientView.swift */; };
@@ -65,6 +64,7 @@
 		B64036F52B5011C30018A023 /* UploadLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64036F42B5011C30018A023 /* UploadLoadingView.xib */; };
 		B64036F72B50138C0018A023 /* UploadLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64036F62B50138C0018A023 /* UploadLoadingView.swift */; };
 		B640F8252B624E4800173CB9 /* WidgetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F8242B624E4800173CB9 /* WidgetsViewController.swift */; };
+		B64F2E3F2BECB5CC00A470EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B64F2E3E2BECB5CC00A470EB /* GoogleService-Info.plist */; };
 		B64F9F572B68FE7200762F97 /* TransformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9F562B68FE7200762F97 /* TransformationCell.swift */; };
 		B665FEC82B3D508B00452FC6 /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B665FEC72B3D508B00452FC6 /* Delivery.storyboard */; };
 		B665FECB2B3D567300452FC6 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */; };
@@ -142,7 +142,6 @@
 		B63AA90D2B6F9E33008B4FA8 /* VideoFeedContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedContainerController.swift; sourceTree = "<group>"; };
 		B63AA90F2B6FA2D0008B4FA8 /* UploadNoCloud.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadNoCloud.storyboard; sourceTree = "<group>"; };
 		B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadNoCloudController.swift; sourceTree = "<group>"; };
-		B63AA9132B70D02C008B4FA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B63CB3622BBAABD0001255BF /* UploadWidget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UploadWidget.storyboard; sourceTree = "<group>"; };
 		B63CB3642BBAAC40001255BF /* UploadWidgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadWidgetViewController.swift; sourceTree = "<group>"; };
 		B63F369E2B3BFF0300A82C49 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		B64036F42B5011C30018A023 /* UploadLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadLoadingView.xib; sourceTree = "<group>"; };
 		B64036F62B50138C0018A023 /* UploadLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLoadingView.swift; sourceTree = "<group>"; };
 		B640F8242B624E4800173CB9 /* WidgetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsViewController.swift; sourceTree = "<group>"; };
+		B64F2E3E2BECB5CC00A470EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B64F9F562B68FE7200762F97 /* TransformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationCell.swift; sourceTree = "<group>"; };
 		B665FEC72B3D508B00452FC6 /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
 		B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 				B614885C2AAF3AE000002289 /* AppDelegate.swift */,
 				B614885E2AAF3AE000002289 /* SceneDelegate.swift */,
 				B61488652AAF3AE100002289 /* Assets.xcassets */,
-				B63AA9132B70D02C008B4FA8 /* GoogleService-Info.plist */,
 				B614886A2AAF3AE100002289 /* Info.plist */,
+				B64F2E3E2BECB5CC00A470EB /* GoogleService-Info.plist */,
 				B61488722AAF3B2200002289 /* Colors.xcassets */,
 			);
 			path = Cloudinary_Sample_App;
@@ -707,7 +707,6 @@
 				B61488692AAF3AE100002289 /* LaunchScreen.storyboard in Resources */,
 				B665FED52B3D776300452FC6 /* Widgets.storyboard in Resources */,
 				B697FB052B0F663D00E3C432 /* video_links.plist in Resources */,
-				B63AA9142B70D02C008B4FA8 /* GoogleService-Info.plist in Resources */,
 				B621F0262B69085900095019 /* SmartCropping.storyboard in Resources */,
 				B61488732AAF3B2200002289 /* Colors.xcassets in Resources */,
 				B63F36A12B3C000A00A82C49 /* Splash.storyboard in Resources */,
@@ -716,6 +715,7 @@
 				B6BD44D02B45972B00DD6AA6 /* Base.storyboard in Resources */,
 				B6BAAA362AB9772D0012D8A8 /* ImageWidget.storyboard in Resources */,
 				B621F02E2B691E6000095019 /* UploadDoesNotExist.storyboard in Resources */,
+				B64F2E3F2BECB5CC00A470EB /* GoogleService-Info.plist in Resources */,
 				B64036F52B5011C30018A023 /* UploadLoadingView.xib in Resources */,
 				B63AA90A2B6F900F008B4FA8 /* VideoSocialOverlays.storyboard in Resources */,
 				B6EEAD6A2B692F9A000A745E /* UploadChoice.storyboard in Resources */,
