@@ -65,6 +65,14 @@
 		B64036F72B50138C0018A023 /* UploadLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64036F62B50138C0018A023 /* UploadLoadingView.swift */; };
 		B640F8252B624E4800173CB9 /* WidgetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640F8242B624E4800173CB9 /* WidgetsViewController.swift */; };
 		B64F2E3F2BECB5CC00A470EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B64F2E3E2BECB5CC00A470EB /* GoogleService-Info.plist */; };
+		B64F2E432BECDFED00A470EB /* AssetModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E412BECDFED00A470EB /* AssetModel.xcdatamodeld */; };
+		B64F2E4D2BECE10900A470EB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E4C2BECE10900A470EB /* CoreDataHelper.swift */; };
+		B64F2E4F2BECE22C00A470EB /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E4E2BECE22C00A470EB /* AssetModel.swift */; };
+		B64F2E582BECE59800A470EB /* AssetItems+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E562BECE59800A470EB /* AssetItems+CoreDataClass.swift */; };
+		B64F2E592BECE59800A470EB /* AssetItems+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E572BECE59800A470EB /* AssetItems+CoreDataProperties.swift */; };
+		B64F2E5C2BF0AC4D00A470EB /* SingleUploadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E5B2BF0AC4D00A470EB /* SingleUploadCell.swift */; };
+		B64F2E5E2BF0ACC100A470EB /* SingleUploadCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E5D2BF0ACC100A470EB /* SingleUploadCollectionController.swift */; };
+		B64F2E602BF0B7C700A470EB /* SingleUploadCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E5F2BF0B7C700A470EB /* SingleUploadCollectionLayout.swift */; };
 		B64F9F572B68FE7200762F97 /* TransformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9F562B68FE7200762F97 /* TransformationCell.swift */; };
 		B665FEC82B3D508B00452FC6 /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B665FEC72B3D508B00452FC6 /* Delivery.storyboard */; };
 		B665FECB2B3D567300452FC6 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */; };
@@ -157,6 +165,14 @@
 		B64036F62B50138C0018A023 /* UploadLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadLoadingView.swift; sourceTree = "<group>"; };
 		B640F8242B624E4800173CB9 /* WidgetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsViewController.swift; sourceTree = "<group>"; };
 		B64F2E3E2BECB5CC00A470EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B64F2E422BECDFED00A470EB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B64F2E4C2BECE10900A470EB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		B64F2E4E2BECE22C00A470EB /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		B64F2E562BECE59800A470EB /* AssetItems+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetItems+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B64F2E572BECE59800A470EB /* AssetItems+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetItems+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B64F2E5B2BF0AC4D00A470EB /* SingleUploadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadCell.swift; sourceTree = "<group>"; };
+		B64F2E5D2BF0ACC100A470EB /* SingleUploadCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadCollectionController.swift; sourceTree = "<group>"; };
+		B64F2E5F2BF0B7C700A470EB /* SingleUploadCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadCollectionLayout.swift; sourceTree = "<group>"; };
 		B64F9F562B68FE7200762F97 /* TransformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationCell.swift; sourceTree = "<group>"; };
 		B665FEC72B3D508B00452FC6 /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
 		B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +244,7 @@
 		B614885B2AAF3AE000002289 /* Cloudinary_Sample_App */ = {
 			isa = PBXGroup;
 			children = (
+				B64F2E402BECDFE000A470EB /* Core Data */,
 				B6BD44CB2B458A0A00DD6AA6 /* Helpers */,
 				B63F369D2B3BFEF800A82C49 /* Custom Views */,
 				B6838E4C2AB961AF00B972D7 /* Resources */,
@@ -437,6 +454,29 @@
 			path = Widgets;
 			sourceTree = "<group>";
 		};
+		B64F2E402BECDFE000A470EB /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B64F2E412BECDFED00A470EB /* AssetModel.xcdatamodeld */,
+				B64F2E562BECE59800A470EB /* AssetItems+CoreDataClass.swift */,
+				B64F2E572BECE59800A470EB /* AssetItems+CoreDataProperties.swift */,
+				B64F2E4C2BECE10900A470EB /* CoreDataHelper.swift */,
+				B64F2E4E2BECE22C00A470EB /* AssetModel.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		B64F2E5A2BF0AC3D00A470EB /* Single Upload */ = {
+			isa = PBXGroup;
+			children = (
+				B64036EF2B4FF1590018A023 /* SingleUploadViewController.swift */,
+				B64F2E5B2BF0AC4D00A470EB /* SingleUploadCell.swift */,
+				B64F2E5D2BF0ACC100A470EB /* SingleUploadCollectionController.swift */,
+				B64F2E5F2BF0B7C700A470EB /* SingleUploadCollectionLayout.swift */,
+			);
+			path = "Single Upload";
+			sourceTree = "<group>";
+		};
 		B665FEC62B3D507000452FC6 /* Inner Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,9 +502,9 @@
 		B665FED02B3D745B00452FC6 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				B64F2E5A2BF0AC3D00A470EB /* Single Upload */,
 				B69FA1E52AB87016001D361F /* UploadViewController.swift */,
 				B621F02F2B69203E00095019 /* Upload Does Not Exist */,
-				B64036EF2B4FF1590018A023 /* SingleUploadViewController.swift */,
 				B665FED12B3D746500452FC6 /* InnerUploadFrame.swift */,
 				B6EEAD6B2B692FB1000A745E /* UploadChoiceController.swift */,
 				B63AA9112B6FB664008B4FA8 /* UploadNoCloudController.swift */,
@@ -773,6 +813,8 @@
 			files = (
 				B64036F72B50138C0018A023 /* UploadLoadingView.swift in Sources */,
 				B63F36A82B3C1A5A00A82C49 /* Toolbar.swift in Sources */,
+				B64F2E4D2BECE10900A470EB /* CoreDataHelper.swift in Sources */,
+				B64F2E4F2BECE22C00A470EB /* AssetModel.swift in Sources */,
 				B621F01C2B69002A00095019 /* DeliveryTransformCollectionController.swift in Sources */,
 				B6BD44CD2B458A1900DD6AA6 /* AnimationHelper.swift in Sources */,
 				B62825072B863342006BA8AF /* NormalizingProductAssetsViewController.swift in Sources */,
@@ -810,16 +852,22 @@
 				B63F369F2B3BFF0300A82C49 /* GradientView.swift in Sources */,
 				B621F01F2B69016E00095019 /* DeliveryUseCasesCollectionController.swift in Sources */,
 				B62824FC2B85EC11006BA8AF /* UseCasesViewController.swift in Sources */,
+				B64F2E592BECE59800A470EB /* AssetItems+CoreDataProperties.swift in Sources */,
 				B69D671A2B6F842C00DA3C89 /* VideoFeedController.swift in Sources */,
 				B62824FE2B86175F006BA8AF /* UseCasesCollectionController.swift in Sources */,
 				B6EEAD952B6A7F63000A745E /* VideoFeedCollectionController.swift in Sources */,
+				B64F2E5C2BF0AC4D00A470EB /* SingleUploadCell.swift in Sources */,
+				B64F2E432BECDFED00A470EB /* AssetModel.xcdatamodeld in Sources */,
 				B61A1DEB2B70D62E00C2C9D6 /* EventObject.swift in Sources */,
 				B69FA1E22AB86F4D001D361F /* Double+Extension.swift in Sources */,
+				B64F2E582BECE59800A470EB /* AssetItems+CoreDataClass.swift in Sources */,
 				B665FED22B3D746500452FC6 /* InnerUploadFrame.swift in Sources */,
 				B621F0312B69204B00095019 /* UploadDoesNotExistController.swift in Sources */,
+				B64F2E5E2BF0ACC100A470EB /* SingleUploadCollectionController.swift in Sources */,
 				B63F36A32B3C02C800A82C49 /* SplashViewController.swift in Sources */,
 				B614885F2AAF3AE000002289 /* SceneDelegate.swift in Sources */,
 				B6BAAA382AB977410012D8A8 /* ImageWidgetViewController.swift in Sources */,
+				B64F2E602BF0B7C700A470EB /* SingleUploadCollectionLayout.swift in Sources */,
 				B69FA1DB2AB8631A001D361F /* OptimizationViewController.swift in Sources */,
 				B6EEAD972B6A7F81000A745E /* VideoFeedCell.swift in Sources */,
 				B64036F02B4FF1590018A023 /* SingleUploadViewController.swift in Sources */,
@@ -1094,6 +1142,19 @@
 			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B64F2E412BECDFED00A470EB /* AssetModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B64F2E422BECDFED00A470EB /* Model.xcdatamodel */,
+			);
+			currentVersion = B64F2E422BECDFED00A470EB /* Model.xcdatamodel */;
+			path = AssetModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B61488512AAF3AE000002289 /* Project object */;
 }

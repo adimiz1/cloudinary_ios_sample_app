@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-class SplashViewController: UIViewController {
+import WebKit
+class SplashViewController: UIViewController, WKNavigationDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let delayInSeconds: TimeInterval = 2
@@ -16,7 +17,7 @@ class SplashViewController: UIViewController {
         }
         EventsHandler.shared.logEvent(event: EventObject(name: "Splash"))
     }
-
+    
     func transitionToMainController() {
         // Instantiate your main view controller
         let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your actual storyboard name
