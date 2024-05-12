@@ -9,15 +9,22 @@ import Foundation
 import UIKit
 import Cloudinary
 
+protocol SingleUploadCollectionDelegate {
+    func presentController(_ controller: UIViewController)
+}
+
 class SingleUploadCollectionController: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    var delegate: SingleUploadCollectionDelegate
 
     var data: [AssetItems]
     let cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
     weak var collectionView: UICollectionView? // Weak reference to collection view
 
-    init(collectionView: UICollectionView) {
+    init(delegate: SingleUploadCollectionDelegate, collectionView: UICollectionView) {
         self.collectionView = collectionView
         self.data = CoreDataHelper.shared.fetchData() ?? []
+        self.delegate = delegate
         super.init()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -29,8 +36,14 @@ class SingleUploadCollectionController: NSObject, UICollectionViewDelegate, UICo
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "uploadCell", for: indexPath) as! SingleUploadCell
-        cell.ivMain.cldSetImage(data[indexPath.row].url, cloudinary: cloudinary)
+        cell.setImage(data[indexPath.row].url, cloudinary)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = UIStoryboard(name: "SingleUploadPreview", bundle: nil).instantiateViewController(withIdentifier: "SingleUploadPreview") as! SingleUploadPreview
+        controller.url = data[indexPath.row].url
+        delegate.presentController(controller)
     }
 
     func refreshData() {

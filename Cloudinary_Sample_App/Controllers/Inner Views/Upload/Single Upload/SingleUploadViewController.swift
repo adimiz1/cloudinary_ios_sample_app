@@ -50,7 +50,7 @@ class SingleUploadViewController: UIViewController {
     }
 
     private func setMainCollectionView() {
-        collectionController = SingleUploadCollectionController(collectionView: cvMain)
+        collectionController = SingleUploadCollectionController(delegate: self, collectionView: cvMain)
         collectionLayout = SingleUploadCollectionLayout()
         cvMain.delegate = collectionController
         cvMain.dataSource = collectionController
@@ -138,6 +138,24 @@ class SingleUploadViewController: UIViewController {
             }
         })
     }
+
+    func uploadVideo(_ url: URL) {
+        addUploadingView()
+        let params = CLDUploadRequestParams()
+        params.setResourceType("video")
+        cloudinary.createUploader().upload(url: url as URL, uploadPreset: "ios_sample", params: params, completionHandler:  { response, error in
+            if let response = response {
+                CoreDataHelper.shared.insertData(AssetModel(deliveryType: response.type ?? "upload", assetType: response.resourceType ?? "video", transformation: "", publicId: response.publicId ?? "", url: response.secureUrl ?? ""))
+            }
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.3) {
+                    self.collectionController.refreshData()
+                    self.cvMain.reloadData()
+                }
+                self.removeUploadingView()
+            }
+        })
+    }
 }
 
 extension SingleUploadViewController:  UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -145,6 +163,9 @@ extension SingleUploadViewController:  UINavigationControllerDelegate, UIImagePi
         picker.dismiss(animated: true, completion: nil)
         if let image = info[.originalImage] as? UIImage {
             uploadImage(image)
+        }
+        if let url = info[.mediaURL] as? URL {
+            uploadVideo(url)
         }
     }
 }
@@ -160,4 +181,12 @@ extension SingleUploadViewController: CLDUploaderWidgetDelegate {
     }
     func uploadWidgetDidDismiss() {
     }
+}
+
+extension SingleUploadViewController: SingleUploadCollectionDelegate {
+    func presentController(_ controller: UIViewController) {
+        self.present(controller, animated: true)
+    }
+    
+
 }

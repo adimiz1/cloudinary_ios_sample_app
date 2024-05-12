@@ -73,6 +73,8 @@
 		B64F2E5C2BF0AC4D00A470EB /* SingleUploadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E5B2BF0AC4D00A470EB /* SingleUploadCell.swift */; };
 		B64F2E5E2BF0ACC100A470EB /* SingleUploadCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E5D2BF0ACC100A470EB /* SingleUploadCollectionController.swift */; };
 		B64F2E602BF0B7C700A470EB /* SingleUploadCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E5F2BF0B7C700A470EB /* SingleUploadCollectionLayout.swift */; };
+		B64F2E622BF0CF8900A470EB /* SingleUploadPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64F2E612BF0CF8900A470EB /* SingleUploadPreview.storyboard */; };
+		B64F2E642BF0CFC400A470EB /* SingleUploadPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F2E632BF0CFC400A470EB /* SingleUploadPreview.swift */; };
 		B64F9F572B68FE7200762F97 /* TransformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9F562B68FE7200762F97 /* TransformationCell.swift */; };
 		B665FEC82B3D508B00452FC6 /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B665FEC72B3D508B00452FC6 /* Delivery.storyboard */; };
 		B665FECB2B3D567300452FC6 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */; };
@@ -173,6 +175,8 @@
 		B64F2E5B2BF0AC4D00A470EB /* SingleUploadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadCell.swift; sourceTree = "<group>"; };
 		B64F2E5D2BF0ACC100A470EB /* SingleUploadCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadCollectionController.swift; sourceTree = "<group>"; };
 		B64F2E5F2BF0B7C700A470EB /* SingleUploadCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadCollectionLayout.swift; sourceTree = "<group>"; };
+		B64F2E612BF0CF8900A470EB /* SingleUploadPreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingleUploadPreview.storyboard; sourceTree = "<group>"; };
+		B64F2E632BF0CFC400A470EB /* SingleUploadPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUploadPreview.swift; sourceTree = "<group>"; };
 		B64F9F562B68FE7200762F97 /* TransformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationCell.swift; sourceTree = "<group>"; };
 		B665FEC72B3D508B00452FC6 /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
 		B665FECA2B3D567300452FC6 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 				B64036F12B4FF7130018A023 /* SingleUpload.storyboard */,
 				B621F02D2B691E6000095019 /* UploadDoesNotExist.storyboard */,
 				B6EEAD692B692F9A000A745E /* UploadChoice.storyboard */,
+				B64F2E612BF0CF8900A470EB /* SingleUploadPreview.storyboard */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				B64F2E5B2BF0AC4D00A470EB /* SingleUploadCell.swift */,
 				B64F2E5D2BF0ACC100A470EB /* SingleUploadCollectionController.swift */,
 				B64F2E5F2BF0B7C700A470EB /* SingleUploadCollectionLayout.swift */,
+				B64F2E632BF0CFC400A470EB /* SingleUploadPreview.swift */,
 			);
 			path = "Single Upload";
 			sourceTree = "<group>";
@@ -746,6 +752,7 @@
 				B61EFF732B8F6751006F267C /* IntegrateAI.storyboard in Resources */,
 				B61488692AAF3AE100002289 /* LaunchScreen.storyboard in Resources */,
 				B665FED52B3D776300452FC6 /* Widgets.storyboard in Resources */,
+				B64F2E622BF0CF8900A470EB /* SingleUploadPreview.storyboard in Resources */,
 				B697FB052B0F663D00E3C432 /* video_links.plist in Resources */,
 				B621F0262B69085900095019 /* SmartCropping.storyboard in Resources */,
 				B61488732AAF3B2200002289 /* Colors.xcassets in Resources */,
@@ -844,6 +851,7 @@
 				B6BD44D92B4BD22E00DD6AA6 /* TransformCollectionController.swift in Sources */,
 				B621F0212B6901A300095019 /* UseCaseCell.swift in Sources */,
 				B6BD44D72B4BD1A100DD6AA6 /* TransformCollectionCell.swift in Sources */,
+				B64F2E642BF0CFC400A470EB /* SingleUploadPreview.swift in Sources */,
 				B61EFF752B8F6784006F267C /* IntegrateAIViewController.swift in Sources */,
 				B621F02B2B6919D600095019 /* RevealImageController.swift in Sources */,
 				B640F8252B624E4800173CB9 /* WidgetsViewController.swift in Sources */,
