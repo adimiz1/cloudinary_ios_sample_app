@@ -15,8 +15,14 @@ class SingleUploadCell: UICollectionViewCell {
         var url = url
         if url.contains("video") {
             url = replaceExtension(urlString: url) ?? ""
+            ivMain.cldSetImage(url, cloudinary: cloudinary)
+            return
         }
-        ivMain.cldSetImage(url, cloudinary: cloudinary)
+        guard let url = URL(string: url) else {
+            return
+        }
+        let publicId = url.lastPathComponent
+        ivMain.cldSetImage(publicId: publicId, cloudinary: cloudinary, transformation: CLDTransformation().setCrop("thumb"))
     }
 
     func replaceExtension(urlString: String) -> String? {

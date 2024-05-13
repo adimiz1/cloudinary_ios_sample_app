@@ -18,8 +18,14 @@ class SingleUploadCollectionLayout: UICollectionViewFlowLayout {
         guard let collectionView = collectionView else { return }
 
         // Calculate item size to occupy one-third of the collection view's width
-        let itemWidth = (collectionView.bounds.width - 20 - minimumInteritemSpacing * 2) / 3
+        let itemWidth = (collectionView.bounds.width - minimumInteritemSpacing * 2 - minimumLineSpacing * 2) / 3
         itemSize = CGSize(width: itemWidth, height: itemWidth)
+
+        // Calculate horizontal inset to center items
+        let inset = (collectionView.bounds.width - CGFloat(3) * itemWidth - minimumInteritemSpacing * 2) / 2
+
+        // Set section inset
+        sectionInset = UIEdgeInsets(top: sectionInset.top, left: inset, bottom: sectionInset.bottom, right: inset)
 
         // Adjust alignment for single item
         if collectionView.numberOfItems(inSection: 0) == 1 {
@@ -28,8 +34,6 @@ class SingleUploadCollectionLayout: UICollectionViewFlowLayout {
             singleItemAttributes?.frame.origin = CGPoint(x: sectionInset.left, y: sectionInset.top)
         } else {
             singleItemAttributes = nil
-            let spacing = minimumInteritemSpacing * CGFloat(2)
-            sectionInset.right = spacing
         }
     }
 

@@ -18,7 +18,7 @@ class SingleUploadCollectionController: NSObject, UICollectionViewDelegate, UICo
     var delegate: SingleUploadCollectionDelegate
 
     var data: [AssetItems]
-    let cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!))
+    let cloudinary = CLDCloudinary(configuration: CLDConfiguration(cloudName: CloudinaryHelper.shared.getUploadCloud()!, secure: true))
     weak var collectionView: UICollectionView? // Weak reference to collection view
 
     init(delegate: SingleUploadCollectionDelegate, collectionView: UICollectionView) {
